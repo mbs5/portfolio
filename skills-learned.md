@@ -93,3 +93,12 @@ until back. Established pattern held — no surprises.
 - Chaining: edit via gpt-image-2-image-to-image + input_urls[] (≤16 refs); upscale via grok-imagine/upscale (kie images only, pass taskId).
 - No seed param — consistency via reference images + locked "brand fingerprint" prompt suffix.
 - Workflow: iterate cheap at 1K, upscale the winner.
+
+## 12. Rebuild pass, 2026-10-05 (what changed my mind)
+- The research killed the accordion-first idea: no top-tier portfolio uses one on the home page. Secondary work gets the accordion; featured work gets full sections.
+- "One engine, N skins" is the asset, not eight screenshots. A switcher over one frame with the token values changing is the whole StoreKit argument in one interaction.
+- Braille plus Atkinson dithering reads as stipple engraving, which belongs in an ivory and bronze world. Plain ASCII ramps read as terminal and do not.
+- A Muslim identity on a professional site is carried by one small mark and by geometry, never by iconography. Bismillah in Amiri at 18px, an eight-point star at 5% opacity, a meander frieze: that is the whole budget.
+- Sampling the brand accent from each live store's own pixels gave honest token values for the switcher without inventing anything.
+- Full-page screenshots lie when scroll-driven animations are on; shoot viewport by viewport with reducedMotion set.
+- Never fix overflow with body overflow-x hidden; outline every element past the right edge and fix the cause (min-width 0 on grid children was the usual one).
