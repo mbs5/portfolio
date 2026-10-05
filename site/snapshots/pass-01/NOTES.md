@@ -1,0 +1,1 @@
+Pass 1, 2026-10-05 04:40 EDT. Baseline of the rebuild. Known weaknesses going into pass 2: blueprint diagram small on phones, Kaizen thumb is a sign-in page, new emblems not yet placed beside section heads, fonts not self-hosted, no dark-mode review, no writing section.

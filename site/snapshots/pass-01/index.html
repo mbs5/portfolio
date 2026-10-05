@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Muhammad Bin Sohail</title>
+<meta name="description" content="Founding engineer at Built By Design. I build the storefront once and ship it eight times, and the operating systems family businesses run on.">
+<meta property="og:title" content="Muhammad Bin Sohail">
+<meta property="og:description" content="One storefront engine, eight live brands. Operating systems for family businesses. Open to product engineering roles in commerce and infrastructure.">
+<meta property="og:image" content="https://portfolio.closedloopintel.com/assets/emblems/mark.webp">
+<meta name="theme-color" content="#F4F0E8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#15130F" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="../../assets/emblems/mark.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&family=Amiri&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="../../assets/emblems/mark.webp" fetchpriority="high">
+<link rel="stylesheet" href="styles.css">
+<!-- source: github.com/mbs5/portfolio -->
+</head>
+<body>
+<div id="live" class="visually-hidden" aria-live="polite"></div>
+<svg width="0" height="0" style="position:absolute;color:var(--rule)" aria-hidden="true">
+  <defs>
+    <pattern id="meander" width="6" height="5" patternUnits="userSpaceOnUse" patternTransform="scale(2)">
+      <path d="M0 .5H5.5V4.5H1.5V2.5H4" fill="none" stroke="currentColor" stroke-width=".55" stroke-linejoin="miter"/>
+    </pattern>
+  </defs>
+</svg>
+
+<header class="mast">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Muhammad Bin Sohail, home">M B S</a>
+    <nav aria-label="Primary"><ul class="nav">
+      <li><a href="#work">Work</a></li>
+      <li><a href="#storekit">StoreKit</a></li>
+      <li><a href="#archive">Archive</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul></nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <svg class="star" viewBox="0 0 200 200" aria-hidden="true"><polygon id="khatam" points="" fill="none" stroke="currentColor" stroke-width="1"/><polygon points="" fill="none" stroke="currentColor" stroke-width="1" transform="rotate(22.5 100 100) scale(.62) translate(61.3 61.3)"/></svg>
+  <div class="wrap">
+    <p class="bism" lang="ar" dir="rtl" aria-label="Bismillah">بِسْمِ ٱللَّٰهِ</p>
+    <div class="hero-grid">
+      <div>
+        <span class="k name">Muhammad Bin Sohail</span>
+        <h1>I'm a founding engineer at Built By Design. I build the storefront <em>once</em> and ship it eight times, and the operating systems that family businesses run on.</h1>
+        <p class="lede">Commerce infrastructure by day: one engine, many brands. By night, the software my family's farms actually use. Computer science at the University at Buffalo, graduating Summer 2027.</p>
+        <div class="cta">
+          <a class="btn solid" href="#storekit">See StoreKit</a>
+          <a class="btn" href="mailto:muhammad@closedloopintel.com">Email me</a>
+        </div>
+        <p class="status"><b>Now:</b> looking for product engineering roles in commerce and infrastructure, and for serious builds before Summer 2027.</p>
+      </div>
+      <div class="emblem" aria-hidden="true">
+        <pre></pre>
+        <img src="../../assets/emblems/mark.webp" width="560" height="560" alt="" fetchpriority="high" decoding="async">
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="frieze" aria-hidden="true"><svg><rect width="100%" height="10" fill="url(#meander)"/></svg></div>
+
+<section class="sec" id="work">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2>Selected work</h2><span class="n">I</span></div>
+
+    <article class="feature reveal" id="storekit">
+      <div>
+        <h3>StoreKit</h3>
+        <span class="tag">One storefront engine. Eight live brands.</span>
+        <p>Every supplement storefront needs the same surfaces: hero, catalog, product page, cart, checkout, account, proof of testing, compliance gates. Rebuilding them per brand is slow, and copying one brand's site into another leaves colours and images bleeding through.</p>
+        <p>StoreKit is a tokenized component system where a brand is one file. Edit <span class="mono">tokens.css</span> and the same components come out as a different store. No hex values live in components. Eight reference brands prove the range.</p>
+        <ul class="facts">
+          <li>8 storefronts live on Vercel</li>
+          <li>114 brand-consistent product images</li>
+          <li>Next.js 15, Tailwind preset, Turborepo</li>
+          <li>Catalog snapshots, zero cross-brand leaks</li>
+        </ul>
+        <div class="links">
+          <a class="plink" href="#how-storekit">How it's built</a>
+          <a class="plink" href="mailto:muhammad@closedloopintel.com?subject=StoreKit%20source">Source on request</a>
+        </div>
+      </div>
+      <div class="media">
+        <div class="switcher">
+          <div class="tabs" role="tablist" aria-label="Choose a brand">
+            <button class="tab" role="tab" aria-selected="true" style="--c:#2749cb" data-name="Vanta Bio" data-rgb="39 73 203" data-note="cobalt" data-url="https://vanta-bio-ash-rahmans-projects-c41122ac.vercel.app"><span class="dot"></span>Vanta Bio</button>
+            <button class="tab" role="tab" aria-selected="false" style="--c:#b8862b" data-name="Halcyon Labs" data-rgb="184 134 43" data-note="gold on graphite" data-url="https://halcyon-labs-tau.vercel.app"><span class="dot"></span>Halcyon</button>
+            <button class="tab" role="tab" aria-selected="false" style="--c:#c77138" data-name="Caldera Peptides" data-rgb="199 113 56" data-note="terracotta and oxblood" data-url="https://caldera-peptides.vercel.app"><span class="dot"></span>Caldera</button>
+            <button class="tab" role="tab" aria-selected="false" style="--c:#806e3a" data-name="Solace Bio" data-rgb="128 110 58" data-note="sage and olive" data-url="https://solace-bio-ten.vercel.app"><span class="dot"></span>Solace</button>
+            <button class="tab" role="tab" aria-selected="false" style="--c:#7e60fc" data-name="Lumen Peptides" data-rgb="126 96 252" data-note="violet" data-url="https://lumen-peptides-ruddy.vercel.app"><span class="dot"></span>Lumen</button>
+            <button class="tab" role="tab" aria-selected="false" style="--c:#de9d55" data-name="Keystone Peptides" data-rgb="222 157 85" data-note="amber on slate" data-url="https://keystone-peptides-ten.vercel.app"><span class="dot"></span>Keystone</button>
+            <button class="tab" role="tab" aria-selected="false" style="--c:#81ae23" data-name="Nucleus" data-rgb="129 174 35" data-note="lime on black" data-url="https://nucleus-peptides-two.vercel.app"><span class="dot"></span>Nucleus</button>
+            <button class="tab" role="tab" aria-selected="false" style="--c:#91285e" data-name="Vector Peptides" data-rgb="145 40 94" data-note="magenta on graphite" data-url="https://vector-peptides-beta.vercel.app"><span class="dot"></span>Vector</button>
+          </div>
+          <div class="stage" aria-live="off">
+            <img src="../../assets/stores/vanta.webp" width="1200" height="720" alt="Vanta Bio storefront" class="on" decoding="async">
+            <img src="../../assets/stores/halcyon.webp" width="1200" height="720" alt="Halcyon Labs storefront" loading="lazy" decoding="async">
+            <img src="../../assets/stores/caldera.webp" width="1200" height="720" alt="Caldera Peptides storefront" loading="lazy" decoding="async">
+            <img src="../../assets/stores/solace.webp" width="1200" height="720" alt="Solace Bio storefront" loading="lazy" decoding="async">
+            <img src="../../assets/stores/lumen.webp" width="1200" height="720" alt="Lumen Peptides storefront" loading="lazy" decoding="async">
+            <img src="../../assets/stores/keystone.webp" width="1200" height="720" alt="Keystone Peptides storefront" loading="lazy" decoding="async">
+            <img src="../../assets/stores/nucleus.webp" width="1200" height="720" alt="Nucleus storefront" loading="lazy" decoding="async">
+            <img src="../../assets/stores/vector.webp" width="1200" height="720" alt="Vector Peptides storefront" loading="lazy" decoding="async">
+          </div>
+          <pre class="tokens" aria-label="Brand token excerpt"></pre>
+          <div class="sw-foot"><span>Same components. Different <span class="sw-name">Vanta Bio</span>.</span><a class="sw-open" href="https://vanta-bio-ash-rahmans-projects-c41122ac.vercel.app" target="_blank" rel="noopener">Open this store ↗</a></div>
+        </div>
+        <ul class="stores" aria-label="All eight storefronts">
+          <li><a href="https://vanta-bio-ash-rahmans-projects-c41122ac.vercel.app" style="--c:#2749cb" target="_blank" rel="noopener"><span class="dot"></span>Vanta Bio</a></li>
+          <li><a href="https://halcyon-labs-tau.vercel.app" style="--c:#b8862b" target="_blank" rel="noopener"><span class="dot"></span>Halcyon Labs</a></li>
+          <li><a href="https://caldera-peptides.vercel.app" style="--c:#c77138" target="_blank" rel="noopener"><span class="dot"></span>Caldera</a></li>
+          <li><a href="https://solace-bio-ten.vercel.app" style="--c:#806e3a" target="_blank" rel="noopener"><span class="dot"></span>Solace Bio</a></li>
+          <li><a href="https://lumen-peptides-ruddy.vercel.app" style="--c:#7e60fc" target="_blank" rel="noopener"><span class="dot"></span>Lumen</a></li>
+          <li><a href="https://keystone-peptides-ten.vercel.app" style="--c:#de9d55" target="_blank" rel="noopener"><span class="dot"></span>Keystone</a></li>
+          <li><a href="https://nucleus-peptides-two.vercel.app" style="--c:#81ae23" target="_blank" rel="noopener"><span class="dot"></span>Nucleus</a></li>
+          <li><a href="https://vector-peptides-beta.vercel.app" style="--c:#91285e" target="_blank" rel="noopener"><span class="dot"></span>Vector</a></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="feature flip reveal" id="how-storekit">
+      <div>
+        <h3>How StoreKit is built</h3>
+        <span class="tag">A design contract, then faithful brand apps.</span>
+        <p>The shared package is a Tailwind preset plus a token file. Colours are stored as RGB triplets so opacity modifiers still work, a 50 to 900 brand ramp and a neutral ramp cover every surface, and light or dark is a single attribute flip on the same variables.</p>
+        <p>Each brand app is a complete storefront wired to that contract: catalog, product pages, cart, checkout, account, certificates. Product photography is generated from a logo-locked base so the brand mark renders on the glass instead of being pasted on top. Demos serve a local catalog snapshot, so each store stands alone.</p>
+        <p class="m">Status, honestly: eight reference stores are live, the shared package carries the token contract, and extracting the component variants into the package is the next step.</p>
+      </div>
+      <div class="media">
+        <svg class="diagram" viewBox="0 0 520 300" role="img" aria-label="Diagram: one token contract feeding eight brand apps">
+          <rect class="bx" x="20" y="120" width="150" height="60" rx="3"/>
+          <text x="95" y="146" text-anchor="middle">tokens.css</text>
+          <text class="m" x="95" y="164" text-anchor="middle">one file per brand</text>
+          <rect class="bx" x="20" y="200" width="150" height="60" rx="3"/>
+          <text x="95" y="226" text-anchor="middle">@storekit/ui</text>
+          <text class="m" x="95" y="244" text-anchor="middle">preset and fonts</text>
+          <rect class="hub" x="215" y="140" width="110" height="60" rx="3"/>
+          <text class="hubt" x="270" y="166" text-anchor="middle" style="fill:var(--bg)">components</text>
+          <text class="m" x="270" y="184" text-anchor="middle" style="fill:var(--rule)">no hex inside</text>
+          <path class="l" d="M170 150 H215 M170 230 C195 230 195 170 215 170"/>
+          <g id="brands">
+            <path class="l" d="M325 170 C360 170 360 32 390 32 M325 170 C360 170 360 66 390 66 M325 170 C360 170 360 100 390 100 M325 170 C360 170 360 134 390 134 M325 170 C360 170 360 168 390 168 M325 170 C360 170 360 202 390 202 M325 170 C360 170 360 236 390 236 M325 170 C360 170 360 270 390 270"/>
+            <circle cx="398" cy="32" r="4" fill="#2749cb"/><text x="410" y="36">Vanta Bio</text>
+            <circle cx="398" cy="66" r="4" fill="#b8862b"/><text x="410" y="70">Halcyon Labs</text>
+            <circle cx="398" cy="100" r="4" fill="#c77138"/><text x="410" y="104">Caldera</text>
+            <circle cx="398" cy="134" r="4" fill="#806e3a"/><text x="410" y="138">Solace Bio</text>
+            <circle cx="398" cy="168" r="4" fill="#7e60fc"/><text x="410" y="172">Lumen</text>
+            <circle cx="398" cy="202" r="4" fill="#de9d55"/><text x="410" y="206">Keystone</text>
+            <circle cx="398" cy="236" r="4" fill="#81ae23"/><text x="410" y="240">Nucleus</text>
+            <circle cx="398" cy="270" r="4" fill="#91285e"/><text x="410" y="274">Vector</text>
+          </g>
+        </svg>
+      </div>
+    </article>
+
+    <article class="feature reveal" id="peptiful">
+      <div>
+        <h3>Peptiful</h3>
+        <span class="tag">One warehouse, many storefronts, one stock.</span>
+        <p>The multi-tenant commerce and telehealth engine I helped found at Built By Design. A shared product list and a single stock count sit under several white-label health brands, each with its own name, storefront and customers. When one shop sells, stock drops for all of them at once.</p>
+        <p>Underneath: patient intake, physician matching, fulfilment and pharmacy backends, SMS automation, and per-brand subaccounts. A new brand goes live in days because the engine already exists. I own the UI and the integration layer.</p>
+        <ul class="facts">
+          <li>Operator-reported revenue above $12M a year</li>
+          <li>Multi-tenant storefronts on one catalog</li>
+          <li>Intake, matching, fulfilment, SMS in one loop</li>
+        </ul>
+        <div class="links"><a class="plink" href="https://agriful-story.vercel.app#peptiful" target="_blank" rel="noopener">One order through Peptiful ↗</a></div>
+      </div>
+      <div class="media">
+        <svg class="diagram" viewBox="0 0 520 300" role="img" aria-label="Diagram: one engine feeding several storefronts, intake, pharmacy and SMS">
+          <rect class="hub" x="195" y="115" width="130" height="70" rx="35"/>
+          <text x="260" y="146" text-anchor="middle" style="fill:var(--bg)">one engine</text>
+          <text class="m" x="260" y="164" text-anchor="middle" style="fill:var(--rule)">one stock</text>
+          <path class="l" d="M260 115 V60 M260 185 V240 M195 150 H120 M325 150 H400 M215 125 L150 80 M305 125 L370 80 M215 175 L150 220 M305 175 L370 220"/>
+          <rect class="bx" x="200" y="30" width="120" height="30" rx="3"/><text x="260" y="49" text-anchor="middle">Storefront A</text>
+          <rect class="bx" x="40" y="135" width="80" height="30" rx="3"/><text x="80" y="154" text-anchor="middle">Storefront B</text>
+          <rect class="bx" x="400" y="135" width="90" height="30" rx="3"/><text x="445" y="154" text-anchor="middle">Storefront C</text>
+          <rect class="bx" x="200" y="240" width="120" height="30" rx="3"/><text x="260" y="259" text-anchor="middle">Pharmacy</text>
+          <rect class="bx" x="70" y="55" width="80" height="30" rx="3"/><text x="110" y="74" text-anchor="middle">Intake</text>
+          <rect class="bx" x="370" y="55" width="100" height="30" rx="3"/><text x="420" y="74" text-anchor="middle">Physicians</text>
+          <rect class="bx" x="70" y="215" width="80" height="30" rx="3"/><text x="110" y="234" text-anchor="middle">SMS</text>
+          <rect class="bx" x="370" y="215" width="100" height="30" rx="3"/><text x="420" y="234" text-anchor="middle">Fulfilment</text>
+        </svg>
+      </div>
+    </article>
+
+    <article class="feature flip reveal" id="operations">
+      <div>
+        <h3>Operations that run themselves</h3>
+        <span class="tag">EggFlow and Agriful: the farm and the feed mill.</span>
+        <p>My family runs three layer farms, about a hundred thousand birds each. Production arrived as WhatsApp screenshots of Excel, sales lived in a handwritten Urdu register, and knowing who owed what meant calling the sales guy.</p>
+        <p>EggFlow replaced that. The doctor enters production once on a phone. A photo of a handwritten bill fills the sales form. Cash, online and credit split themselves, every rupee owed is tracked by age, and the day only closes when the numbers reconcile. Eighty-seven tests pin the paper numbers.</p>
+        <p>Agriful is the same model drawn for a feed mill: dealer orders over WhatsApp, a credit check before the truck moves, collections that chase themselves. It is a proposal with a full service blueprint, not a product yet, and I say so on the page.</p>
+        <div class="links"><a class="plink" href="https://agriful-story.vercel.app" target="_blank" rel="noopener">Read the story ↗</a></div>
+      </div>
+      <div class="media">
+        <svg class="diagram" viewBox="0 0 520 300" role="img" aria-label="Service blueprint: need, order, credit check, dispatch, delivery, payment, plan">
+          <g id="stages">
+            <rect class="bx" x="12" y="40" width="64" height="44" rx="3"/><text x="44" y="66" text-anchor="middle">Need</text>
+            <rect class="bx" x="84" y="40" width="64" height="44" rx="3"/><text x="116" y="66" text-anchor="middle">Order</text>
+            <rect class="bx" x="156" y="40" width="64" height="44" rx="3"/><text x="188" y="60" text-anchor="middle">Credit</text><text x="188" y="72" text-anchor="middle">check</text>
+            <rect class="bx" x="228" y="40" width="64" height="44" rx="3"/><text x="260" y="66" text-anchor="middle">Dispatch</text>
+            <rect class="bx" x="300" y="40" width="64" height="44" rx="3"/><text x="332" y="66" text-anchor="middle">Delivery</text>
+            <rect class="bx" x="372" y="40" width="64" height="44" rx="3"/><text x="404" y="66" text-anchor="middle">Payment</text>
+            <rect class="bx" x="444" y="40" width="64" height="44" rx="3"/><text x="476" y="66" text-anchor="middle">Plan</text>
+          </g>
+          <path class="l" d="M76 62 H84 M148 62 H156 M220 62 H228 M292 62 H300 M364 62 H372 M436 62 H444"/>
+          <text class="m" x="12" y="120">Farmer</text><path class="l" d="M12 126 H508" stroke-dasharray="2 3"/>
+          <circle cx="44" cy="146" r="4" fill="var(--bronze)"/><text class="m" x="54" y="150">one WhatsApp message</text>
+          <text class="m" x="12" y="180">Dealer</text><path class="l" d="M12 186 H508" stroke-dasharray="2 3"/>
+          <circle cx="116" cy="206" r="4" fill="var(--bronze)"/><text class="m" x="126" y="210">messages the mill as before</text>
+          <circle cx="332" cy="206" r="4" fill="var(--bronze)"/><text class="m" x="342" y="210">confirms with a tap</text>
+          <text class="m" x="12" y="240">Mill office</text><path class="l" d="M12 246 H508" stroke-dasharray="2 3"/>
+          <circle cx="188" cy="266" r="4" fill="var(--bronze)"/><text class="m" x="198" y="270">limit and dues checked</text>
+          <circle cx="404" cy="266" r="4" fill="var(--bronze)"/><text class="m" x="414" y="270">reminders go out</text>
+        </svg>
+      </div>
+    </article>
+
+    <article class="feature reveal" id="healthpedia">
+      <div>
+        <h3>Healthpedia</h3>
+        <span class="tag">A family health record humans can read and agents can safely write to.</span>
+        <p>It started as a hand-maintained PDF for my grandmother in Lahore: three doctors, handwritten prescriptions, conflicting plans, one page of truth that someone had to keep current by hand.</p>
+        <p>Now an agent inside Claude or ChatGPT reads the record and files proposed changes from voice notes and prescription photos. Every proposed field carries a confidence score and its evidence, a cropped region of the photo or the exact sentence from the note. Nothing touches the record until a family member approves it in the queue. Agents propose, humans publish.</p>
+        <ul class="facts"><li>Next.js, Postgres, Vercel Blob</li><li>MCP server with bearer auth</li><li>Confidence and evidence on every field</li></ul>
+        <div class="links"><a class="plink" href="https://healthpedia-beta.vercel.app" target="_blank" rel="noopener">Live ↗</a></div>
+      </div>
+      <div class="media">
+        <svg class="diagram" viewBox="0 0 520 300" role="img" aria-label="Flow: voice note or photo, agent proposal with confidence and evidence, family confirmation queue, record">
+          <rect class="bx" x="16" y="60" width="110" height="52" rx="3"/><text x="71" y="82" text-anchor="middle">Voice note</text><text class="m" x="71" y="100" text-anchor="middle">or prescription photo</text>
+          <rect class="bx" x="16" y="188" width="110" height="52" rx="3"/><text x="71" y="210" text-anchor="middle">Doctor visit</text><text class="m" x="71" y="228" text-anchor="middle">typed by hand</text>
+          <rect class="hub" x="170" y="110" width="140" height="80" rx="3"/>
+          <text x="240" y="138" text-anchor="middle" style="fill:var(--bg)">agent proposes</text>
+          <text class="m" x="240" y="156" text-anchor="middle" style="fill:var(--rule)">confidence + evidence</text>
+          <text class="m" x="240" y="172" text-anchor="middle" style="fill:var(--rule)">per field</text>
+          <rect class="bx" x="350" y="110" width="80" height="80" rx="3"/><text x="390" y="140" text-anchor="middle">Family</text><text x="390" y="154" text-anchor="middle">approves</text><text class="m" x="390" y="174" text-anchor="middle">the queue</text>
+          <rect class="bx" x="456" y="120" width="52" height="60" rx="3"/><text x="482" y="144" text-anchor="middle">Record</text><text class="m" x="482" y="162" text-anchor="middle">versioned</text>
+          <path class="l" d="M126 86 C150 86 150 150 170 150 M126 214 C150 214 150 150 170 150 M310 150 H350 M430 150 H456"/>
+        </svg>
+      </div>
+    </article>
+  </div>
+</section>
+
+<div class="frieze" aria-hidden="true"><svg><rect width="100%" height="10" fill="url(#meander)"/></svg></div>
+
+<section class="sec" id="more">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2>More work</h2><span class="n">II</span></div>
+    <ul class="list reveal">
+      <li class="card" id="kaizen" style="--img:url(../../assets/work/kaizen.webp)">
+        <h3><button aria-expanded="false" aria-controls="p-kaizen"><span><span class="t">Kaizen Desk</span><span class="s">Bring your own keys. Run a market scenario through two simulation engines and keep score.</span></span><span class="chev">+</span></button></h3>
+        <div class="panel" id="p-kaizen" role="region" aria-labelledby="kaizen" hidden><div><div class="panel-in">
+          <div><p>A console for traders who want to test a thesis before risking money on it. Describe a scenario, run it through two swarm-simulation engines, compare their answers, and calibrate each engine's hit rate over time. One OpenRouter key drives every model slot, and keys never leave the browser.</p><p class="m" style="margin-top:10px;color:var(--muted)">Built first for a friend's father who needed it privately. Sign-in required. Next.js, Clerk, OpenRouter.</p><div class="links"><a class="plink" href="https://kaizeniq.vercel.app" target="_blank" rel="noopener">Open ↗</a></div></div>
+          <div class="thumb"><img src="../../assets/work/kaizen.webp" width="1200" height="720" alt="Kaizen sign-in screen" loading="lazy" decoding="async"></div>
+        </div></div></div>
+      </li>
+      <li class="card" id="longevity-os" style="--img:url(../../assets/work/longevityos.webp)">
+        <h3><button aria-expanded="false" aria-controls="p-los"><span><span class="t">Longevity OS</span><span class="s">A coach and client operating system. Intake from biometrics in sixty seconds, then the plan.</span></span><span class="chev">+</span></button></h3>
+        <div class="panel" id="p-los" role="region" aria-labelledby="longevity-os" hidden><div><div class="panel-in">
+          <div><p>Two sides of one system. The client confirms a pre-filled intake from their numbers, then logs days. The coach gets a review queue, plans, labs, protocols, sleep and workout data, and an AI coach that drafts the next decision for a human to approve. Built at Built By Design.</p><div class="links"><a class="plink" href="https://longevityos.builtbydesign.io" target="_blank" rel="noopener">Open ↗</a></div></div>
+          <div class="thumb"><img src="../../assets/work/longevityos.webp" width="1200" height="720" alt="Longevity OS intake" loading="lazy" decoding="async"></div>
+        </div></div></div>
+      </li>
+      <li class="card" id="peptides" style="--img:url(../../assets/work/peptides.webp)">
+        <h3><button aria-expanded="false" aria-controls="p-pep"><span><span class="t">Peptides, by Closed Loop</span><span class="s">A brand site for a service that builds and scales peptide brands. Sense, build, act, learn.</span></span><span class="chev">+</span></button></h3>
+        <div class="panel" id="p-pep" role="region" aria-labelledby="peptides" hidden><div><div class="panel-in">
+          <div><p>The front door for my own company's first offer: embed operators inside a brand, from naming and packaging to a conversion-tuned store with proof of testing, then paid social, email and SMS, and the operations loop that keeps improving. The site is the pitch written as a system.</p><div class="links"><a class="plink" href="https://peptides.closedloopintel.com" target="_blank" rel="noopener">Open ↗</a></div></div>
+          <div class="thumb"><img src="../../assets/work/peptides.webp" width="1200" height="720" alt="Peptides by Closed Loop site" loading="lazy" decoding="async"></div>
+        </div></div></div>
+      </li>
+      <li class="card" id="worn" style="--img:url(../../assets/work/worn.webp)">
+        <h3><button aria-expanded="false" aria-controls="p-worn"><span><span class="t">Worn</span><span class="s">A private wardrobe your assistant can talk to. Fifteen MCP tools, one closet.</span></span><span class="chev">+</span></button></h3>
+        <div class="panel" id="p-worn" role="region" aria-labelledby="worn" hidden><div><div class="panel-in">
+          <div><p>Photograph your clothes, import in bulk, and let ChatGPT or Claude suggest an outfit for the weather, log what you wore, and undo safely. The closet is an MCP connector with OAuth consent, PKCE and dynamic client registration, so the assistant only ever sees your wardrobe. Expo, a stateless Node API, Supabase.</p><div class="links"><a class="plink" href="https://worn-vault.vercel.app" target="_blank" rel="noopener">Open ↗</a></div></div>
+          <div class="thumb"><img src="../../assets/work/worn.webp" width="1200" height="720" alt="Worn app" loading="lazy" decoding="async"></div>
+        </div></div></div>
+      </li>
+      <li class="card" id="launch" style="--img:url(../../assets/work/llama.webp)">
+        <h3><button aria-expanded="false" aria-controls="p-launch"><span><span class="t">Launch</span><span class="s">A rough idea to a PRD, architecture, stack plan and prototype in under five minutes. Meta hackathon finalist.</span></span><span class="chev">+</span></button></h3>
+        <div class="panel" id="p-launch" role="region" aria-labelledby="launch" hidden><div><div class="panel-in">
+          <div><p>Built for Meta's Llama Impact Hackathon on lablab.ai, where it was a finalist for best developer-productivity tool. A Llama 3 pipeline turns a few sentences into the documents a team usually spends days on. Next.js, Together AI, LlamaIndex, Restack. I shipped it during the semester I had to spend away from school, which is the part I'm proudest of.</p><div class="links"><a class="plink" href="https://launch.codingden.co/" target="_blank" rel="noopener">Open ↗</a><a class="plink" href="https://github.com/mbs5/llama-launch" target="_blank" rel="noopener">Code ↗</a></div></div>
+          <div class="thumb"><img src="../../assets/work/llama.webp" width="1200" height="720" alt="Launch app" loading="lazy" decoding="async"></div>
+        </div></div></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<div class="frieze" aria-hidden="true"><svg><rect width="100%" height="10" fill="url(#meander)"/></svg></div>
+
+<section class="sec" id="how">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2>How I work</h2><span class="n">III</span></div>
+    <div class="quotes reveal">
+      <blockquote class="q"><p>Allah has prescribed ihsan in all things.</p><cite>Sahih Muslim 1955</cite></blockquote>
+      <blockquote class="q"><p>Men become builders by building and lyre-players by playing the lyre.</p><cite>Aristotle, Nicomachean Ethics II.1</cite></blockquote>
+      <blockquote class="q"><p>The seeker after truth is not one who studies the writings of the ancients and puts his trust in them, but rather the one who suspects his faith in them and questions what he gathers from them.</p><cite>Ibn al-Haytham, Doubts Concerning Ptolemy</cite></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="archive">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2>Archive</h2><span class="n">IV</span></div>
+    <table class="tbl reveal">
+      <thead><tr><th>Year</th><th>Project</th><th class="hide">Made at</th><th class="hide">Built with</th><th>Link</th></tr></thead>
+      <tbody>
+        <tr><td>2026</td><td>Agriful story</td><td class="hide at">Closed Loop</td><td class="hide">HTML, SVG, GSAP</td><td><a href="https://agriful-story.vercel.app" target="_blank" rel="noopener">Open</a></td></tr>
+        <tr><td>2026</td><td>EggFlow</td><td class="hide at">Family farms</td><td class="hide">Next.js, Supabase</td><td><span class="at">Private</span></td></tr>
+        <tr><td>2026</td><td>Chinese immersion dashboard</td><td class="hide at">Personal</td><td class="hide">HTML, Vercel</td><td><a href="https://chinese-dashboard.vercel.app" target="_blank" rel="noopener">Open</a></td></tr>
+                <tr><td>2026</td><td>Vibelearn</td><td class="hide at">Personal</td><td class="hide">Next.js</td><td><a href="https://vibelearn-puce.vercel.app" target="_blank" rel="noopener">Open</a></td></tr>
+        <tr><td>2025</td><td>Learn Mandarin</td><td class="hide at">Personal</td><td class="hide">Next.js</td><td><a href="https://github.com/mbs5/learn-mandarin" target="_blank" rel="noopener">Code</a></td></tr>
+        <tr><td>2025</td><td>ThirdEye</td><td class="hide at">Team</td><td class="hide">Python, Next.js</td><td><a href="https://github.com/mbs5/ThirdEye-Frontend" target="_blank" rel="noopener">Code</a></td></tr>
+        <tr><td>2024</td><td>NegotiateX</td><td class="hide at">Personal</td><td class="hide">iOS, Llama</td><td><a href="https://github.com/mbs5/NegotiateX" target="_blank" rel="noopener">Code</a></td></tr>
+        <tr><td>2024</td><td>Endgame</td><td class="hide at">Personal</td><td class="hide">JavaScript</td><td><a href="https://endgame.codingden.co" target="_blank" rel="noopener">Open</a></td></tr>
+        <tr><td>2024</td><td>Launchpad</td><td class="hide at">Personal</td><td class="hide">Next.js</td><td><a href="https://launchpad-brown.vercel.app" target="_blank" rel="noopener">Open</a></td></tr>
+        <tr><td>2024</td><td>Quran.com frontend</td><td class="hide at">Open source</td><td class="hide">Next.js</td><td><a href="https://github.com/mbs5/quran.com-frontend-next" target="_blank" rel="noopener">Code</a></td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:18px"><a class="plink" href="https://github.com/mbs5?tab=repositories" target="_blank" rel="noopener">Everything on GitHub ↗</a></p>
+  </div>
+</section>
+
+<div class="frieze" aria-hidden="true"><svg><rect width="100%" height="10" fill="url(#meander)"/></svg></div>
+
+<section class="contact" id="contact">
+  <div class="wrap reveal">
+    <span class="k">Contact</span>
+    <h2 style="margin-top:10px">If you're building commerce infrastructure, or a business that should run itself, write to me.</h2>
+    <div class="email">
+      <a href="mailto:muhammad@closedloopintel.com">muhammad@closedloopintel.com</a>
+      <button class="copy" type="button" data-email="muhammad@closedloopintel.com">Copy</button>
+    </div>
+    <ul class="social">
+      <li><a href="https://www.instagram.com/muhammadbsohail/" target="_blank" rel="noopener">Instagram, @muhammadbsohail</a> <small>writing to 16.5k people about building</small></li>
+      <li><a href="https://github.com/mbs5" target="_blank" rel="noopener">GitHub, mbs5</a></li>
+    </ul>
+    <p class="status" style="margin-top:26px">Buffalo, New York, and Lahore. Replies within a day.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Muhammad Bin Sohail, 2026. Built by hand, no framework.</span>
+    <span><a href="https://github.com/mbs5/portfolio" target="_blank" rel="noopener">Source</a></span>
+  </div>
+</footer>
+
+<div class="ctabar" aria-hidden="false"><a class="btn solid" href="mailto:muhammad@closedloopintel.com">Email me</a></div>
+
+<script>
+  // 8-point star watermark (two squares) and inner star
+  (function(){const R=92,cx=100,cy=100;const pts=k=>[...Array(16)].map((_,i)=>{const a=i*Math.PI/8,r=i%2?R*0.7654:R;return (cx+r*Math.cos(a)).toFixed(2)+','+(cy+r*Math.sin(a)).toFixed(2)}).join(' ');document.querySelectorAll('.hero .star polygon').forEach(p=>p.setAttribute('points',pts()));})();
+</script>
+<script src="app.js" defer></script>
+</body>
+</html>
