@@ -4,7 +4,7 @@ Rule: nothing on the site may claim more than what is written here. Qualitative 
 
 ## Identity
 - Muhammad Bin Sohail. CTO / founding engineer at Built By Design (BBD). CS at University at Buffalo, graduating Summer 2027. Owner of Closed Loop Intelligence LLC (NY).
-- Email for the site: muhammad@closedloopintel.com. Instagram @muhammadbsohail, 16.5k followers (figure given by MBS). GitHub mbs5.
+- Email for the site: muhammad@closedloopintel.com. Instagram @muhammadbsohail, 16.5k followers (figure given by MBS). GitHub mbs5. X @mbsdot (memory: X dashboard). Based in Buffalo, New York, and Lahore (memory).
 - Peptiful revenue figure: "$12M a year" is OPERATOR-REPORTED. Always qualify.
 
 ## StoreKit (headline, local repo ~/Desktop/Workspace/storekit, committed 2026-10-05, no remote yet)
