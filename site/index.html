@@ -158,9 +158,9 @@
       </div>
       <div class="media">
         <ul class="ledger" aria-label="What one day looks like in EggFlow, illustrative numbers">
-          <li><span class="k">06:40</span><b>Production</b><span>Vet logs 57 petti and 4 trays for house 2 (a petti is 12 trays, 360 eggs). Feed and losses on the same screen.</span></li>
+          <li><span class="k">06:40</span><b>Production</b><span>Vet logs 57 petti and 4 trays for house 2 (a petti is a 30-dozen crate). Feed and losses on the same screen.</span></li>
           <li><span class="k">12:05</span><b>Sale</b><span>150 petti to a dealer. Rs 3,00,000 cash, Rs 4,50,000 online, Rs 3,30,000 on credit.</span></li>
-          <li><span class="k">16:20</span><b>Collections</b><span>Every rupee owed is bucketed by age: 0 to 30 days, 31 to 60, over 60.</span></li>
+          <li><span class="k">16:20</span><b>Collections</b><span>Every rupee owed is bucketed by how old it is.</span></li>
           <li><span class="k">17:02</span><b>Bill scan</b><span>A photo of a handwritten memo becomes a filled form: customer, memo number, total, paid, credit.</span></li>
           <li><span class="k">21:00</span><b>Day close</b><span>Closes only when production, sales and cash reconcile.</span></li>
         </ul>
@@ -212,12 +212,12 @@
         <div class="dg"><div class="land"><svg class="diagram" viewBox="0 0 520 300" role="img" aria-label="Flow: voice note or photo, agent proposal with confidence and evidence, family confirmation queue, record">
           <rect class="bx" x="16" y="60" width="120" height="56" rx="6"/><text x="76" y="84" text-anchor="middle">Voice note</text><text class="m" x="76" y="102" text-anchor="middle">or prescription photo</text>
           <rect class="bx" x="16" y="184" width="120" height="56" rx="6"/><text x="76" y="208" text-anchor="middle">Doctor visit</text><text class="m" x="76" y="226" text-anchor="middle">typed by hand</text>
-          <rect class="hub" x="176" y="108" width="150" height="84" rx="6"/>
-          <text x="251" y="138" text-anchor="middle" style="fill:var(--bg)">agent proposes</text>
-          <text class="m" x="251" y="158" text-anchor="middle" style="fill:var(--rule)">confidence + evidence</text><text class="m" x="251" y="176" text-anchor="middle" style="fill:var(--rule)">per field</text>
-          <rect class="bx" x="360" y="108" width="82" height="84" rx="6"/><text x="401" y="140" text-anchor="middle">Family</text><text x="401" y="156" text-anchor="middle">approves</text><text class="m" x="401" y="178" text-anchor="middle">the queue</text>
-          <rect class="bx" x="452" y="118" width="62" height="64" rx="6"/><text x="483" y="152" text-anchor="middle">Record</text>
-          <path class="l" d="M136 88 C156 88 156 150 176 150 M136 212 C156 212 156 150 176 150 M326 150 H360 M442 150 H456"/>
+          <rect class="hub" x="166" y="108" width="140" height="84" rx="6"/>
+          <text x="236" y="138" text-anchor="middle" style="fill:var(--bg)">agent proposes</text>
+          <text class="m" x="236" y="158" text-anchor="middle" style="fill:var(--rule)">confidence + evidence</text><text class="m" x="236" y="176" text-anchor="middle" style="fill:var(--rule)">per field</text>
+          <rect class="bx" x="330" y="108" width="82" height="84" rx="6"/><text x="371" y="140" text-anchor="middle">Family</text><text x="371" y="156" text-anchor="middle">approves</text><text class="m" x="371" y="178" text-anchor="middle">the queue</text>
+          <rect class="bx" x="436" y="118" width="72" height="64" rx="6"/><text x="472" y="152" text-anchor="middle">Record</text>
+          <path class="l" d="M136 88 C151 88 151 150 166 150 M136 212 C151 212 151 150 166 150 M306 150 H330 M412 150 H436"/>
         </svg></div><div class="port"><svg class="diagram" viewBox="0 0 340 380" role="img" aria-label="Flow: voice note or photo, agent proposal with confidence and evidence, family confirmation queue, record">
   <rect class="bx" x="16" y="16" width="148" height="56" rx="6"/><text x="90" y="40" text-anchor="middle">Voice note</text><text class="m" x="90" y="58" text-anchor="middle">or prescription photo</text>
   <rect class="bx" x="176" y="16" width="148" height="56" rx="6"/><text x="250" y="40" text-anchor="middle">Doctor visit</text><text class="m" x="250" y="58" text-anchor="middle">typed by hand</text>
@@ -261,7 +261,7 @@
   <div class="wrap">
     <div class="sec-head reveal"><span class="k">06</span><h2>How I work</h2></div>
     <div class="how-grid reveal">
-      <p><b>Ship to production, then iterate.</b> EggFlow and Peptiful are in daily use; Healthpedia was built for my family. EggFlow had real farm data in it the day it went live.</p>
+      <p><b>Ship to production, then iterate.</b> EggFlow and Peptiful are in use; Healthpedia was built for my family. EggFlow had real farm data in it the day it went live.</p>
       <p><b>Pin the truth with tests.</b> EggFlow's tests encode the real paper numbers, so a refactor cannot quietly change a total.</p>
       <p><b>Agents propose, humans publish.</b> In Healthpedia the model drafts and a family member approves, and every proposed field carries its confidence and its evidence.</p>
       <p><b>One contract, many surfaces.</b> StoreKit and Peptiful both come from the same habit: build the engine once, then let brands, farms or families wear it.</p>
@@ -278,12 +278,11 @@
     <div class="actions reveal">
       <a class="btn solid big addr" href="mailto:muhammad@closedloopintel.com?subject=Hello%20from%20your%20portfolio">muhammad@closedloopintel.com</a>
       <button class="btn big copy" type="button" data-email="muhammad@closedloopintel.com">Copy the address</button>
-      <a class="btn big" href="https://github.com/mbs5" target="_blank" rel="noopener">GitHub, mbs5</a>
+      <a class="btn big" href="https://x.com/mbsdot" target="_blank" rel="noopener">Follow on X</a>
     </div>
     <ul class="social reveal">
       <li><a href="https://www.instagram.com/muhammadbsohail/" target="_blank" rel="noopener">Instagram, @muhammadbsohail</a> <small>writing to 16.5k people</small></li>
-      <li><a href="https://x.com/mbsdot" target="_blank" rel="noopener">X, @mbsdot</a></li>
-      <li><a href="https://github.com/mbs5?tab=repositories" target="_blank" rel="noopener">GitHub, mbs5</a> <small>everything else lives here</small></li>
+            <li><a href="https://github.com/mbs5?tab=repositories" target="_blank" rel="noopener">GitHub, mbs5</a> <small>everything else lives here</small></li>
     </ul>
     <div class="foot-line reveal"><span>Buffalo, New York, and Lahore.</span><span><a href="https://github.com/mbs5/portfolio" target="_blank" rel="noopener">Source</a></span></div>
   </div>

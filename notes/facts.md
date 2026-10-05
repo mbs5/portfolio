@@ -54,3 +54,6 @@ Rule: nothing on the site may claim more than what is written here. Qualitative 
 
 ## Removed by MBS's instruction
 ICS Coach MCP (encode), MiroShark engine, MiroShark Trader, MiroFish Trader, Rewire, Kolb's tracker, all research framing.
+
+## Units (from the EggFlow memory)
+- 1 petti = 12 trays = 360 eggs (30 dozen). Feed in kg, 1 bag = 50 kg. Aging buckets in the app: 0 to 30, 31 to 60, over 60 days.

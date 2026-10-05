@@ -91,7 +91,7 @@ h1,h2,h3{font-family:var(--display);font-weight:500;font-optical-sizing:auto;let
 .role{display:block;margin-top:4px;font-size:var(--step--1);color:var(--muted)}
 .feature p{margin-top:14px;max-width:58ch}
 .feature p.m{color:var(--muted)}
-.facts{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:16px;padding:0;list-style:none;font-size:var(--step--1);color:var(--muted)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:6px 18px;margin-top:16px;padding:0;list-style:none;font-size:var(--step--1);color:var(--muted)}
 .facts li::before{content:"◆";font-size:.5em;vertical-align:middle;margin-right:8px;color:var(--bronze)}
 .links{display:flex;flex-wrap:wrap;gap:4px 18px;margin-top:18px}
 .plink{font-weight:500;text-decoration:underline;text-decoration-color:color-mix(in srgb,var(--bronze) 55%,transparent);text-underline-offset:.2em;color:var(--bronze-deep);padding:8px 0;transition:text-decoration-color .16s}
@@ -191,7 +191,7 @@ h1,h2,h3{font-family:var(--display);font-weight:500;font-optical-sizing:auto;let
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:150ms!important}html{scroll-behavior:auto}}
 
 .hero .plate{right:auto;left:-4%;width:min(70vw,820px);object-position:left center;-webkit-mask-image:linear-gradient(to right,#000 0%,#000 45%,transparent 100%),linear-gradient(to bottom,transparent 0%,#000 14%,#000 86%,transparent 100%);mask-image:linear-gradient(to right,#000 0%,#000 45%,transparent 100%),linear-gradient(to bottom,transparent 0%,#000 14%,#000 86%,transparent 100%);opacity:.14}
-@media (max-width:759px){.hero .plate{left:auto;right:-30%;width:110%;object-position:right center;-webkit-mask-image:radial-gradient(ellipse 70% 70% at 70% 30%,#000 0%,#000 35%,transparent 75%);mask-image:radial-gradient(ellipse 70% 70% at 70% 30%,#000 0%,#000 35%,transparent 75%)}}
+@media (max-width:759px){.hero .plate{left:auto;right:-30%;width:110%;opacity:.16;object-position:right center;-webkit-mask-image:radial-gradient(ellipse 70% 70% at 70% 30%,#000 0%,#000 35%,transparent 75%);mask-image:radial-gradient(ellipse 70% 70% at 70% 30%,#000 0%,#000 35%,transparent 75%)}}
 
 #how{padding-top:clamp(28px,4vw,48px)}
 .sw{position:relative}.sw b .arr{position:absolute;top:10px;right:10px;background:var(--surface);padding:0 3px;border-radius:3px}
