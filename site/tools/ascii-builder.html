@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ASCII builder</title>
+<style>
+:root{--bg:#F4F0E8;--ink:#1C1A17;--muted:#6B655C;--rule:#D9D2C5;--bronze:#8C6A3F;--surface:#FBF9F4}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 "EB Garamond",Georgia,serif}
+header{padding:18px 20px;border-bottom:1px solid var(--rule);display:flex;gap:16px;align-items:baseline;flex-wrap:wrap}h1{font-size:18px;margin:0;font-weight:500}header p{margin:0;color:var(--muted);font-size:14px}
+main{display:grid;gap:18px;padding:18px 20px;max-width:1200px;margin:0 auto}
+@media(min-width:900px){main{grid-template-columns:300px minmax(0,1fr)}}
+.panel{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:14px;display:grid;gap:12px;align-content:start}
+label{display:grid;gap:4px;font-size:14px;color:var(--muted)}input[type=range]{width:100%}select,input[type=number],input[type=text]{font:inherit;padding:6px 8px;border:1px solid var(--rule);border-radius:6px;background:#fff}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}button{font:inherit;padding:8px 12px;border:1px solid var(--ink);border-radius:999px;background:#fff;cursor:pointer}button.solid{background:var(--ink);color:var(--bg)}
+.out{background:var(--surface);border:1px solid var(--rule);border-radius:10px;padding:14px;overflow:auto}
+pre{margin:0;font-family:"JetBrains Mono",ui-monospace,Menlo,monospace;font-variant-ligatures:none;letter-spacing:0;line-height:1;color:var(--bronze);white-space:pre}
+.drop{border:1px dashed var(--rule);border-radius:8px;padding:18px;text-align:center;color:var(--muted);font-size:14px}
+small{color:var(--muted)}
+</style></head>
+<body>
+<header><h1>ASCII builder</h1><p>Image in, Braille or hatch engraving out, with frames for a slow animation. Everything runs in your browser.</p></header>
+<main>
+<div class="panel">
+  <div class="drop" id="drop">Drop an image here or <label style="display:inline;color:var(--bronze);cursor:pointer">choose one<input type="file" id="file" accept="image/*" hidden></label></div>
+  <label>Mode <select id="mode"><option value="braille">Braille (stipple engraving)</option><option value="hatch">Hatch ramp</option><option value="diag">Diagonal hatch</option><option value="mosaic">Mosaic blocks</option></select></label>
+  <label>Columns <span id="colsv">60</span><input type="range" id="cols" min="20" max="160" value="60"></label>
+  <label>Contrast <span id="conv">1.2</span><input type="range" id="con" min="0.5" max="3" step="0.05" value="1.2"></label>
+  <label>Gamma <span id="gamv">1.0</span><input type="range" id="gam" min="0.4" max="2.5" step="0.05" value="1"></label>
+  <label>Threshold (Braille) <span id="thv">0.5</span><input type="range" id="th" min="0.1" max="0.9" step="0.01" value="0.5"></label>
+  <label>Dither <select id="dither"><option value="atkinson">Atkinson</option><option value="fs">Floyd-Steinberg</option><option value="none">None</option></select></label>
+  <label><span><input type="checkbox" id="inv"> Invert (light on dark)</span></label>
+  <label>Glyph size px <input type="number" id="fs" value="7" min="3" max="20"></label>
+  <div class="row"><button id="frames">Make 20 frames</button><button id="play">Play / pause</button></div>
+  <div class="row"><button class="solid" id="copy">Copy text</button><button id="json">Download frames JSON</button></div>
+  <small id="stat">Load an image to begin.</small>
+</div>
+<div class="out"><pre id="pre" aria-live="off"></pre></div>
+</main>
+<script>
+(function(){
+const $=s=>document.querySelector(s);
+const RAMPS={hatch:" ˙·:;=≡#",mosaic:" ░▒▓█"};
+let img=null, frames=[], playing=false, fi=0, timer=null;
+const state=()=>({mode:$('#mode').value,cols:+$('#cols').value,con:+$('#con').value,gam:+$('#gam').value,th:+$('#th').value,dither:$('#dither').value,inv:$('#inv').checked,fs:+$('#fs').value});
+function sample(im,w,h){const c=document.createElement('canvas');c.width=w;c.height=h;const x=c.getContext('2d',{willReadFrequently:true});x.fillStyle='#fff';x.fillRect(0,0,w,h);x.drawImage(im,0,0,w,h);const d=x.getImageData(0,0,w,h).data,l=new Float32Array(w*h);for(let i=0;i<w*h;i++)l[i]=(.2126*d[i*4]+.7152*d[i*4+1]+.0722*d[i*4+2])/255;return l;}
+function adjust(l,con,gam,inv){for(let i=0;i<l.length;i++){let v=Math.pow(l[i],gam);v=(v-.5)*con+.5;v=Math.min(1,Math.max(0,v));l[i]=inv?1-v:v;}}
+function dither(l,w,h,kind,levels){if(kind==='none'){for(let i=0;i<l.length;i++)l[i]=Math.round(l[i]*(levels-1))/(levels-1);return;}
+ const K=kind==='atkinson'?[[1,0,1/8],[2,0,1/8],[-1,1,1/8],[0,1,1/8],[1,1,1/8],[0,2,1/8]]:[[1,0,7/16],[-1,1,3/16],[0,1,5/16],[1,1,1/16]];
+ for(let y=0;y<h;y++)for(let x=0;x<w;x++){const i=y*w+x,o=l[i],q=Math.round(o*(levels-1))/(levels-1);l[i]=q;const e=o-q;for(const [dx,dy,f] of K){const nx=x+dx,ny=y+dy;if(nx>=0&&nx<w&&ny<h)l[ny*w+nx]+=e*f;}}}
+function sobel(l,w,h){const a=new Float32Array(w*h);for(let y=1;y<h-1;y++)for(let x=1;x<w-1;x++){const g=(i,j)=>l[(y+j)*w+x+i];const gx=-g(-1,-1)-2*g(-1,0)-g(-1,1)+g(1,-1)+2*g(1,0)+g(1,1),gy=-g(-1,-1)-2*g(0,-1)-g(1,-1)+g(-1,1)+2*g(0,1)+g(1,1);a[y*w+x]=Math.atan2(gy,gx);}return a;}
+function encode(s,thOverride){const cols=s.cols;let out='';
+ if(s.mode==='braille'){const w=cols*2,h=Math.round(cols*img.height/img.width*0.5)*4;const l=sample(img,w,h);adjust(l,s.con,s.gam,s.inv);
+   // shift threshold by remapping before 1-bit dither
+   const t=thOverride??s.th;for(let i=0;i<l.length;i++)l[i]=Math.min(1,Math.max(0,l[i]+(0.5-t)));dither(l,w,h,s.dither,2);
+   const B=[[1,8],[2,16],[4,32],[64,128]];for(let y=0;y<h;y+=4){for(let x=0;x<w;x+=2){let c=0x2800;for(let r=0;r<4;r++)for(let k=0;k<2;k++)if(l[(y+r)*w+x+k]<.5)c|=B[r][k];out+=String.fromCharCode(c);}out+='\n';}return out;}
+ const w=cols,h=Math.max(1,Math.round(cols*img.height/img.width*0.5));const l=sample(img,w,h);adjust(l,s.con,s.gam,s.inv);
+ if(s.mode==='diag'){const ang=sobel(l,w,h);dither(l,w,h,s.dither,4);for(let y=0;y<h;y++){for(let x=0;x<w;x++){const v=l[y*w+x];if(v>.8)out+=' ';else if(v>.5){const a=ang[y*w+x];out+=Math.sin(2*a)>0?'╱':'╲';}else if(v>.25)out+='╳';else out+='█';}out+='\n';}return out;}
+ const ramp=[...RAMPS[s.mode]];dither(l,w,h,s.dither,ramp.length);for(let y=0;y<h;y++){for(let x=0;x<w;x++)out+=ramp[Math.round((1-l[y*w+x])*(ramp.length-1))];out+='\n';}return out;}
+function render(){if(!img)return;const s=state();const t=encode(s);$('#pre').textContent=t;$('#pre').style.fontSize=s.fs+'px';const lines=t.split('\n');$('#stat').textContent=`${lines[0].length} x ${lines.length-1} cells, ${t.length} chars`;}
+['mode','cols','con','gam','th','dither','inv','fs'].forEach(id=>$('#'+id).addEventListener('input',()=>{$('#colsv').textContent=$('#cols').value;$('#conv').textContent=$('#con').value;$('#gamv').textContent=$('#gam').value;$('#thv').textContent=$('#th').value;frames=[];render();}));
+function load(file){const u=URL.createObjectURL(file);const i=new Image();i.onload=()=>{img=i;render();};i.src=u;}
+$('#file').addEventListener('change',e=>e.target.files[0]&&load(e.target.files[0]));
+const drop=$('#drop');drop.addEventListener('dragover',e=>{e.preventDefault();});drop.addEventListener('drop',e=>{e.preventDefault();const f=e.dataTransfer.files[0];if(f)load(f);});
+$('#frames').onclick=()=>{if(!img)return;const s=state();frames=[];for(let k=0;k<20;k++){const t=s.th+0.08*Math.sin(k/20*Math.PI*2);frames.push(encode(s,s.mode==='braille'?t:undefined));}$('#stat').textContent='20 frames ready ('+Math.round(frames.join('').length/1024)+' KB raw)';};
+$('#play').onclick=()=>{if(!frames.length)$('#frames').onclick();playing=!playing;clearInterval(timer);if(playing)timer=setInterval(()=>{fi=(fi+1)%frames.length;$('#pre').textContent=frames[fi];},1000/6);};
+$('#copy').onclick=async()=>{await navigator.clipboard.writeText($('#pre').textContent);$('#stat').textContent='Copied.';};
+$('#json').onclick=()=>{if(!frames.length)$('#frames').onclick();const s=state();const lines=frames[0].split('\n');const blob=new Blob([JSON.stringify({cols:lines[0].length,rows:lines.length-1,fps:6,mode:s.mode,frames})],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='ascii-frames.json';a.click();};
+// demo image: the site mark
+const demo=new Image();demo.crossOrigin='anonymous';demo.onload=()=>{if(!img){img=demo;render();}};demo.src='../assets/emblems/mark.webp';
+})();
+</script>
+</body></html>
