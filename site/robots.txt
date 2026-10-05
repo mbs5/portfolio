@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /snapshots/
+Sitemap: https://portfolio.closedloopintel.com/sitemap.xml
