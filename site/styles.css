@@ -1,8 +1,9 @@
 /* Muhammad Bin Sohail, portfolio. Pentelic palette, mobile first. */
+@font-face{font-family:"EB Garamond Fallback";src:local("Times New Roman"),local("Times");size-adjust:94%;ascent-override:95%;descent-override:26%}
 :root{
   --bg:#F4F0E8;--surface:#FBF9F4;--ink:#1C1A17;--muted:#6B655C;--rule:#D9D2C5;
   --bronze:#8C6A3F;--bronze-deep:#6E5230;--cobalt:#1F4E9E;--gold:#C9A961;
-  --serif:"EB Garamond",Garamond,"Times New Roman",serif;
+  --serif:"EB Garamond","EB Garamond Fallback",Garamond,"Times New Roman",serif;
   --caps:Cinzel,"Trajan Pro","Times New Roman",serif;
   --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
   --ar:Amiri,"Scheherazade New",serif;
