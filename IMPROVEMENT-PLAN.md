@@ -6,49 +6,35 @@ Live: https://portfolio.closedloopintel.com (also portfolio-nine-silk-61.vercel.
 Repo: github.com/mbs5/portfolio (push only from the mbs5 account)
 Source of truth for claims: notes/facts.md. Research: notes/research-0*.md. Skills: skills-learned.md.
 
-## Open items, ranked by impact
+## Open items, ranked by impact (rewritten after pass 6, 2026-10-05)
 
-### A. Proof and content
-1. StoreKit install demo. The strongest signal in every library site surveyed is the one-command install next to a live URL. Today the shared package is only a token contract. Publish @storekit/ui to npm (even v0.1 with preset + tokens + fonts), then show `pnpm add @storekit/ui` on the card. Blocked on: StoreKit repo needs a remote first (no git remote today).
-2. StoreKit component extraction. Move the catalog card, PDP, cart drawer, checkout and COA block into packages/storekit as tokenized components, so the sentence "a brand is one file" is literally true. Then record the 60-second video: new tokens.css, run dev, new store. This is the X launch asset.
-3. Kaizen needs a public landing. Its live URL is a Clerk sign-in page in development mode. Either add a marketing page at / with a demo video, or feature a diagram thumbnail instead of the screenshot. Until then the card says sign-in required.
-4. EggFlow screenshots. The farm ERP is the most human story on the page and has no image. Capture the mobile entry screens with seeded demo data (never the real logins) and add a 3-phone strip to the Operations feature.
-5. Writing section. Every senior site surveyed has one even with 3 posts. Candidates already written elsewhere: the Agriful blueprint essay, "one engine many brands", the Healthpedia confidence-and-evidence design. Add a Writing section between More work and How I work once two posts exist.
-6. Real numbers where honest. Each featured item should carry one number. Have: 8 stores, 114 images, 87 tests, operator-reported $12M. Missing: EggFlow daily entries since July, Healthpedia proposals approved, Peptiful brands count (confirm with Ash before stating).
-7. Peptiful section says "several white-label brands". Confirm the number with Ash and state it.
+### Needs MBS (blocks the biggest gains)
+1. Publish StoreKit code, or record a 20-second unlisted clip of editing tokens.css and a store re-skinning. Both critics rank this first for design-engineering readers. Blocked on: StoreKit has no git remote; MBS decides whether and where.
+2. Wire at least one StoreKit app to @storekit/ui so the "adopted store by store" sentence has a first store. That also lets the token excerpt stop being a target and become a fact.
+3. Résumé PDF (hero button) and LinkedIn URL (social list).
+4. Peptiful brand count, confirmed with Ash, replacing "several".
+5. Kaizen: a public landing page so the card can show a product screen.
+6. A one-sentence answer, rehearsed, for each interview challenge the critics flagged: share of the $12M that runs through his code; how stock is decremented across tenants; show one EggFlow test; why the Peptiful link lands on an Agriful URL; compliance framing for AI product renders on supplement demos.
 
-### B. Design and craft
-8. Hero image art direction. The laurel-and-star mark is good; a second option is the Ionic column with girih base (already generated in assets/gen) as a tall mobile hero with the Braille engraving effect at larger scale.
-9. Category emblems. Four new engraved emblems exist (commerce ship, farm, health, column) but are not placed yet. Place them as small marks beside section heads at 72px, multiply blend, and retire the old owl/bull/lamp set.
-10. Blended image behind expanded cards. Dark screenshots turn muddy under luminosity blend. Option: generate an engraved "category plate" per card instead of using the screenshot, and keep the screenshot in the thumb only.
-11. Service blueprint diagram is small on phones. Make it a horizontally scrollable strip at 390px or split into two rows.
-12. Self-host fonts with subsetting (Cinzel, EB Garamond, JetBrains Mono, Amiri) and add size-adjust fallbacks. Current Google Fonts link costs a round trip and a FOUT.
-13. AVIF variants for the store screenshots and emblems with picture fallbacks.
-14. Dark mode pass. Tokens exist (oiled walnut) but nobody has reviewed the screenshots in dark. Check the store screenshots' borders and the multiply/screen blend on emblems.
-15. A second signature interaction is tempting; resist it. The brand switcher is the one. Only improve its polish (keyboard focus ring, swipe on touch, pause on hover).
-16. Meander frieze: verify at 1px it reads as a fret on retina and non-retina.
+### Design polish (next loop pass)
+7. Dark mode review of the plates and the two-tone swatches; the multiply plates flip to screen but have not been judged in dark since pass 2.
+8. Real iPhone check: safe-area padding on the CTA bar, rubber-band on the sticky mast, Fraunces hairlines at 300 nits.
+9. Hero plate: the astrolabe reads well on desktop; consider a tighter crop on phones so the dividers are visible above the fold.
+10. Ledger: consider one real anonymised day with MBS's approval, replacing the illustrative numbers.
+11. OG image: regenerate as the eight swatch cards on cream rather than eight screenshots, to match the no-screenshot rule.
+12. Writing section: still the one thing every senior site surveyed has and this page does not. Needs two posts.
 
-### C. ASCII
-17. Build the ASCII builder tool (notes/research-02-ascii.md section 4) as tools/ascii-builder.html in this repo: image in, Braille or hatch ramp out, frames export. Use it to pre-render the hero engraving so the runtime does no canvas work.
-18. Breathing laurel: 20 pre-rendered Braille frames of the mark at 6 fps, threshold on a slow sine, reduced-motion shows frame 0.
-19. Inscription hover scramble exists on desktop; consider removing if it reads gimmicky after a week.
+### Performance
+13. LCP sits at 2.9 to 3.4s on throttled mobile. Inline the critical CSS for the hero and defer the rest; consider serving the hero plate as AVIF.
+14. Swatch cards could become a single inline SVG to avoid eight link paints.
 
-### D. Mobile QA (from the 25-item list in notes/research-04)
-20. Test on a real iPhone: safe-area padding on the CTA bar, rubber-band behaviour of the sticky masthead, Braille glyph width in the system mono fallback.
-21. Lighthouse mobile run and record LCP, CLS, TBT in the pass log. Target LCP under 1.5s on slow 4G.
-22. axe run for colour contrast in both schemes (muted text on ivory is close to the 4.5 line).
-
-### E. Distribution
-23. X launch thread for StoreKit: 8 screenshots, the token switch GIF, the one-file claim, link to the portfolio section. Draft lives in notes/x-launch.md once the video exists.
-24. OG image: generate a 1200x630 plate (mark + name + line) instead of the square emblem.
-25. Submit to a few curated portfolio lists once the writing section exists.
-
-### F. StoreKit product to-dos (for the dedicated agent)
-26. Give StoreKit a remote (mbs5 private repo) and CI that builds all 8 apps on Node 20.
-27. Pattern mining: browse top DTC and supplement storefronts, catalog every distinct component variant (hero, PDP, cart, proof, FAQ, footer), and map each to a tokenized component. Keep docs/master-catalog.md as the registry.
-28. Brand onboarding script: a CLI that takes a brand book (colors, fonts, mark) and emits tokens.css plus the logo-locked product bases.
-29. A hosted showcase with the brand switcher over one real app, not screenshots.
+### StoreKit product to-dos (for the dedicated agent)
+15. Remote plus CI on Node 20 for all eight apps.
+16. Pattern mining of top DTC and supplement storefronts into docs/master-catalog.md, then tokenized components in packages/storekit.
+17. Brand onboarding script: brand book in, tokens.css and logo-locked bases out.
+18. Hosted showcase with a brand switcher over one real app.
 
 ## Pass log
+- 2026-10-05, passes 4 to 6. Direction change from MBS feedback (Peptiful first, Fraunces and Instrument Sans, engraved plates, no screenshots, no archive, no Bismillah, actionable footer), then two rounds of two-model review and finish work. Pass 5 scores: Fable 8/8/8, Opus 8/8/8. Pass 6 is the sign-off build; see site/snapshots/pass-0N/NOTES.md for each.
 - 2026-10-05, pass 2. Fable 5.1 critic reviewed pass 1 (6/10 hiring manager, 7/10 founder, 6/10 typographer). Adopted 12 of its 14 fixes; see site/snapshots/pass-02/NOTES.md. New open items from the review: résumé PDF link (needs file), LinkedIn URL (needs MBS), publish StoreKit code (MBS decision), Kaizen public landing (unchanged).
 - 2026-10-05, pass 1 (ground-up rebuild). Research: IA and positioning, ASCII, classical and Islamic visual language, mobile craft (four reports in notes/). Built: new single-page site, Pentelic palette, Cinzel + EB Garamond + JetBrains Mono + Amiri, hero with Braille engraving that resolves into the mark, StoreKit brand switcher with token panel and 8 real screenshots, three inline SVG diagrams, APG accordion for secondary work with blended thumbs, quotes, flat archive table, contact with copy button, mobile CTA bar, scroll-driven reveals with fallback, dark tokens. Six new engraved emblems generated on kie.ai. QA: no horizontal overflow at 390, no console errors, tap targets raised to 24px minimum, nav no longer wraps. Shipped to mbs5/portfolio.
