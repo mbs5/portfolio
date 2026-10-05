@@ -74,15 +74,15 @@
         <p>A single product list and a single stock count sit under several white-label health brands. Each brand has its own name, storefront and customers. When one shop sells a vial, the count drops for every shop at once, so nobody sells what is not there.</p>
         <p>Underneath: patient intake, physician matching, fulfilment and pharmacy backends, SMS automation and per-brand subaccounts. A new brand goes live in days because the engine already exists. The brands on it do around $12M a year, operator-reported.</p>
         <ul class="facts"><li>Multi-tenant storefronts on one catalog</li><li>Intake, matching, fulfilment, SMS in one loop</li><li>A new brand live in days</li></ul>
-        <div class="links"><a class="plink" href="https://agriful-story.vercel.app#peptiful" target="_blank" rel="noopener">Peptiful's order flow, step by step ↗</a></div>
+        <div class="links"><a class="plink" href="https://agriful-story.vercel.app#peptiful" target="_blank" rel="noopener">Peptiful's order flow, drawn in the Agriful story ↗</a></div>
       </div>
       <div class="media">
         <div class="dg"><div class="land"><svg class="diagram" viewBox="0 0 520 300" role="img" aria-label="Three storefronts above one shared stock count. A sale on one storefront lowers the count every storefront reads.">
-          <g class="store"><rect class="bx" x="30" y="34" width="130" height="64" rx="6"/><text x="95" y="62" text-anchor="middle">Brand A</text><text class="m" x="95" y="82" text-anchor="middle">reads 41 in stock</text></g>
+          <g class="store"><rect class="bx" x="30" y="34" width="130" height="64" rx="6"/><text x="95" y="62" text-anchor="middle">Brand A</text><text class="m" x="95" y="82" text-anchor="middle">now reads 41</text></g>
           <g class="store"><rect class="bx hi" x="195" y="34" width="130" height="64" rx="6"/><text x="260" y="62" text-anchor="middle">Brand B</text><text class="m" x="260" y="82" text-anchor="middle">sells one vial</text></g>
-          <g class="store"><rect class="bx" x="360" y="34" width="130" height="64" rx="6"/><text x="425" y="62" text-anchor="middle">Brand C</text><text class="m" x="425" y="82" text-anchor="middle">reads 41 in stock</text></g>
+          <g class="store"><rect class="bx" x="360" y="34" width="130" height="64" rx="6"/><text x="425" y="62" text-anchor="middle">Brand C</text><text class="m" x="425" y="82" text-anchor="middle">now reads 41</text></g>
           <path class="l" d="M260 98 V150"/><path d="M255 150 L260 158 L265 150 Z" fill="var(--bronze)"/>
-          <path class="l soft" d="M95 104 V158 M425 104 V158"/><path d="M90 104 L95 96 L100 104 Z M420 104 L425 96 L430 104 Z" fill="var(--bronze)" opacity=".7"/>
+          <path class="l soft" d="M95 158 V106 M425 158 V106"/><path d="M90 106 L95 98 L100 106 Z M420 106 L425 98 L430 106 Z" fill="var(--bronze)" opacity=".8"/>
           <rect class="hub" x="30" y="158" width="460" height="74" rx="37"/>
           <text class="big" x="260" y="190" text-anchor="middle" style="fill:var(--bg)">one stock count</text>
           <text class="m" x="260" y="212" text-anchor="middle" style="fill:var(--rule)">42 becomes 41 for every brand at once</text>
@@ -260,10 +260,10 @@
   <div class="wrap">
     <div class="sec-head reveal"><span class="k">06</span><h2>How I work</h2></div>
     <div class="how-grid reveal">
-      <p><b>Ship to production, then iterate.</b> EggFlow, Peptiful and Healthpedia are in use; click through. EggFlow had real farm data in it the day it went live.</p>
+      <p><b>Ship to production, then iterate.</b> EggFlow, Peptiful and Healthpedia are in daily use. EggFlow had real farm data in it the day it went live.</p>
       <p><b>Pin the truth with tests.</b> EggFlow's tests encode the real monthly sheets, so a refactor cannot quietly change a number on the report.</p>
       <p><b>Agents propose, humans publish.</b> In Healthpedia the model drafts and a family member approves, and every proposed field carries its confidence and its evidence.</p>
-      <p><b>One contract, many surfaces.</b> StoreKit and Peptiful both come from the same habit: build the engine once, then let brands, farms or families wear it.</p>
+      <p><b>One contract, many surfaces.</b> StoreKit and Peptiful both come from the same habit: one contract underneath, many brands on top.</p>
     </div>
   </div>
 </section>
