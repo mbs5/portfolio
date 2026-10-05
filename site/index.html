@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammad Bin Sohail — Portfolio</title>
+<meta name="description" content="Muhammad Bin Sohail builds systems that run businesses: AI agents, trading systems, commerce infrastructure, and applied learning tools.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ivory:#f6f1e7; --ivory-deep:#efe8d8; --ink:#2b2519; --bronze:#8a6d3b;
+    --muted:#6f6455; --rule:#d9cfb6;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--ivory); color:var(--ink);
+    font-family:'Cormorant Garamond',Georgia,serif; font-size:19px; line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--bronze);color:var(--ivory)}
+  .wrap{max-width:880px;margin:0 auto;padding:0 28px}
+  /* ---------- nav ---------- */
+  nav{padding:26px 0;border-bottom:1px solid var(--rule)}
+  nav .wrap{display:flex;justify-content:space-between;align-items:center}
+  .brand{font-family:Cinzel,serif;font-size:15px;letter-spacing:.22em;color:var(--ink);text-decoration:none}
+  .links a{font-family:Cinzel,serif;font-size:12.5px;letter-spacing:.18em;color:var(--muted);
+    text-decoration:none;margin-left:26px;transition:color .25s}
+  .links a:hover{color:var(--bronze)}
+  /* ---------- hero ---------- */
+  header{text-align:center;padding:84px 0 30px}
+  .master-emblem{width:150px;height:150px;object-fit:cover;border-radius:50%;
+    mix-blend-mode:multiply;filter:sepia(.32) contrast(1.02);margin-bottom:30px;
+    border:1px solid var(--rule)}
+  h1{font-family:Cinzel,serif;font-weight:500;font-size:clamp(30px,5vw,46px);
+    letter-spacing:.06em;line-height:1.25}
+  .spine{font-size:24px;font-style:italic;color:var(--bronze);margin:18px 0 14px}
+  .sub{max-width:620px;margin:0 auto;color:var(--muted);font-size:20px}
+  /* ---------- divider ---------- */
+  .divider{display:flex;align-items:center;gap:14px;margin:64px auto;max-width:420px}
+  .divider::before,.divider::after{content:"";flex:1;height:1px;background:var(--rule)}
+  .divider span{color:var(--bronze);font-size:13px;letter-spacing:.3em}
+  /* ---------- sections ---------- */
+  section{padding:10px 0 6px;opacity:0;transform:translateY(22px);
+    transition:opacity .8s ease,transform .8s ease}
+  section.visible{opacity:1;transform:none}
+  .sec-head{display:flex;align-items:center;gap:22px;margin-bottom:34px}
+  .sec-emblem{width:104px;height:104px;flex:none;object-fit:cover;border-radius:50%;
+    mix-blend-mode:multiply;filter:sepia(.32) contrast(1.02);border:1px solid var(--rule);
+    transition:transform .5s ease,filter .5s ease}
+  .sec-head:hover .sec-emblem{transform:scale(1.05) rotate(-2deg);filter:sepia(.55) contrast(1.05)}
+  .sec-num{font-family:Cinzel,serif;font-size:13px;letter-spacing:.3em;color:var(--bronze);margin-bottom:6px}
+  h2{font-family:Cinzel,serif;font-weight:500;font-size:26px;letter-spacing:.05em}
+  .project{padding:26px 0;border-top:1px solid var(--rule)}
+  .project:first-of-type{border-top:none}
+  .project h3{font-family:Cinzel,serif;font-weight:500;font-size:17px;letter-spacing:.06em;margin-bottom:8px}
+  .project p{color:var(--muted);max-width:640px;margin-bottom:10px}
+  .project p strong{color:var(--ink);font-weight:600}
+  .plink{font-family:Cinzel,serif;font-size:12px;letter-spacing:.16em;color:var(--bronze);
+    text-decoration:none;margin-right:22px;border-bottom:1px solid transparent;transition:border-color .25s}
+  .plink:hover{border-bottom-color:var(--bronze)}
+  /* ---------- archive ---------- */
+  .archive-grid{display:grid;grid-template-columns:1fr 1fr;gap:4px 32px;margin-top:8px}
+  .archive-grid div{padding:10px 0;border-bottom:1px dotted var(--rule);font-size:18px}
+  .archive-grid div span{color:var(--muted);font-size:16px;font-style:italic}
+  /* ---------- footer ---------- */
+  footer{margin-top:90px;border-top:1px solid var(--rule);padding:44px 0 70px;text-align:center}
+  footer .fin{color:var(--bronze);letter-spacing:.4em;font-size:12px;margin-bottom:18px}
+  footer a{font-family:Cinzel,serif;font-size:13px;letter-spacing:.14em;color:var(--muted);
+    text-decoration:none;margin:0 14px}
+  footer a:hover{color:var(--bronze)}
+  footer p{margin-top:20px;color:var(--muted);font-style:italic;font-size:17px}
+  @media(max-width:640px){
+    .sec-head{flex-direction:column;text-align:center;gap:14px}
+    .archive-grid{grid-template-columns:1fr}
+    .links a{margin-left:16px}
+  }
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <a class="brand" href="#top">M&thinsp;B&thinsp;S</a>
+  <div class="links"><a href="#work">Work</a><a href="#archive">Archive</a><a href="#contact">Contact</a></div>
+</div></nav>
+
+<div class="wrap" id="top">
+<header>
+  <img class="master-emblem" src="assets/emblems/emblem-master.webp" alt="Engraved emblem of an Ionic column in a laurel wreath">
+  <h1>Muhammad Bin Sohail</h1>
+  <p class="spine">I build systems that run businesses.</p>
+  <p class="sub">Founding engineer on commerce infrastructure doing $12M+ a year. Now building AI agents, trading systems, and applied learning tools through Closed Loop Intelligence.</p>
+</header>
+
+<div class="divider"><span>◆</span></div>
+
+<main id="work">
+
+<section>
+  <div class="sec-head">
+    <img class="sec-emblem" src="assets/emblems/emblem-agents.webp" alt="Owl of Athena engraving">
+    <div><div class="sec-num">I</div><h2>AI Agents</h2></div>
+  </div>
+  <div class="project">
+    <h3>ICS Coach MCP</h3>
+    <p>I turned iCanStudy's course library into a grounded AI coach that lives inside Claude and ChatGPT — it answers <strong>only from the corpus</strong>, with every claim cited to the exact lesson.</p>
+    <a class="plink" href="https://encode-dun.vercel.app">Live →</a>
+  </div>
+  <div class="project">
+    <h3>MiroShark — Swarm Intelligence Engine</h3>
+    <p>Upload any document and <strong>hundreds of AI personas simulate public reaction</strong>, hour by hour. Backend, frontend, and Docker — my flagship demo asset.</p>
+    <a class="plink" href="https://github.com/mbs5/MiroShark">Code →</a>
+  </div>
+  <div class="project">
+    <h3>Worn</h3>
+    <p>My private wardrobe app — the closet lives in an MCP connector, so <strong>your AI assistant can talk to your clothes</strong>. Expo, Node, Supabase.</p>
+    <a class="plink" href="https://worn-vault.vercel.app">Live →</a>
+  </div>
+</section>
+
+<div class="divider"><span>◆</span></div>
+
+<section>
+  <div class="sec-head">
+    <img class="sec-emblem" src="assets/emblems/emblem-trading.webp" alt="Bull and cornucopia engraving">
+    <div><div class="sec-num">II</div><h2>Trading &amp; Simulation</h2></div>
+  </div>
+  <div class="project">
+    <h3>Kaizen Trader Console</h3>
+    <p>A bring-your-own-key console for my MiroShark and MiroFish trading engines — <strong>scenarios, calibration, comparison, and reports</strong> in one place. One OpenRouter key drives every model slot; keys never leave the browser.</p>
+    <a class="plink" href="https://kaizeniq.vercel.app">Live →</a>
+  </div>
+  <div class="project">
+    <h3>MiroShark Trader &amp; MiroFish Trader</h3>
+    <p>The two swarm-trading engines behind the console — <strong>the same simulation machinery, pointed at markets</strong> instead of public opinion.</p>
+  </div>
+</section>
+
+<div class="divider"><span>◆</span></div>
+
+<section>
+  <div class="sec-head">
+    <img class="sec-emblem" src="assets/emblems/emblem-learning.webp" alt="Oil lamp and scroll engraving">
+    <div><div class="sec-num">III</div><h2>Learning</h2></div>
+  </div>
+  <div class="project">
+    <h3>Rewire</h3>
+    <p>A <strong>6-week interactive course on the science of learning</strong> that I built for my siblings, grounded in the full iCanStudy corpus — Justin Sung's voice in the copy, hands-on widgets throughout.</p>
+    <a class="plink" href="https://learn-how-to-learn.vercel.app">Live →</a>
+  </div>
+  <div class="project">
+    <h3>Kolb's Cycle Tracker</h3>
+    <p>A tracker for Kolb's experiential learning cycle — <strong>the practice loop behind the Rewire course</strong>.</p>
+    <a class="plink" href="https://github.com/mbs5/kolbs">Code →</a>
+  </div>
+</section>
+
+<div class="divider"><span>◆</span></div>
+
+<section>
+  <div class="sec-head">
+    <img class="sec-emblem" src="assets/emblems/emblem-commerce.webp" alt="Merchant ship and amphora engraving">
+    <div><div class="sec-num">IV</div><h2>Commerce</h2></div>
+  </div>
+  <div class="project">
+    <h3>Peptides — CLI Rebrand</h3>
+    <p>Rebuilt the peptides brand site as a Closed Loop Intelligence property: <strong>operations that run themselves</strong> — sense, act, learn.</p>
+    <a class="plink" href="https://peptides.closedloopintel.com">Live →</a>
+  </div>
+  <div class="project">
+    <h3>Peptiful Engine</h3>
+    <p>The multi-tenant commerce infrastructure I founded: <strong>one warehouse, many storefronts, one stock</strong> — five white-label health brands on a single engine.</p>
+  </div>
+</section>
+
+<div class="divider"><span>◆</span></div>
+
+<section>
+  <div class="sec-head">
+    <img class="sec-emblem" src="assets/emblems/emblem-agriful.webp" alt="Wheat sheaf engraving">
+    <div><div class="sec-num">V</div><h2>Agriful</h2></div>
+  </div>
+  <div class="project">
+    <h3>Agriful — Systems That Run a Business</h3>
+    <p>The Peptiful operating model rebuilt for agriculture: <strong>dealer orders, stock across mills, and collections in one place</strong> — including Eggflow, my system for layer farms that replaces WhatsApp screenshots and handwritten registers.</p>
+    <a class="plink" href="https://agriful-story.vercel.app">Story →</a><a class="plink" href="https://agriful-pd4su3llc-mbs5s-projects.vercel.app/map.html">Visual Map →</a>
+  </div>
+</section>
+
+<div class="divider"><span>◆</span></div>
+
+<section>
+  <div class="sec-head">
+    <img class="sec-emblem" src="assets/emblems/emblem-health.webp" alt="Rod of Asclepius engraving">
+    <div><div class="sec-num">VI</div><h2>Health</h2></div>
+  </div>
+  <div class="project">
+    <h3>Healthpedia</h3>
+    <p>A family health record <strong>humans can read and AI agents can safely write to</strong>. It started as a hand-maintained PDF for my 76-year-old grandmother in Lahore — three doctors, conflicting plans, one page of truth.</p>
+    <a class="plink" href="https://healthpedia-beta.vercel.app">Live →</a>
+  </div>
+  <div class="project">
+    <h3>Longevity OS</h3>
+    <p>A longevity dashboard — <strong>tracking the inputs that compound</strong>.</p>
+    <a class="plink" href="https://longevityos.builtbydesign.io">Live →</a>
+  </div>
+</section>
+
+</main>
+
+<div class="divider"><span>◆</span></div>
+
+<section id="archive">
+  <div class="sec-head">
+    <div><div class="sec-num">VII</div><h2>Archive</h2></div>
+  </div>
+  <p style="color:var(--muted);margin-bottom:18px">Everything else — experiments, coursework, and older builds. The full inventory is on GitHub.</p>
+  <div class="archive-grid">
+    <div>NegotiateX <span>— iOS negotiation simulator on Llama</span></div>
+    <div>ThirdEye <span>— AI photo storyteller</span></div>
+    <div>Tars <span>— local-service discovery</span></div>
+    <div>Llama Launch <span>— Next.js + LlamaIndex finalist</span></div>
+    <div>AI Partner <span>— conversational companion</span></div>
+    <div>System Prompts <span>— my GPT prompt collection</span></div>
+    <div>Personal OS Tracker <span>— Next.js + Prisma</span></div>
+    <div>Media Buying Dashboard <span>— analytics UI</span></div>
+    <div>OpenAI ChatKit Starter <span>— agent builder starter</span></div>
+    <div>Learn Mandarin <span>— Next.js language app</span></div>
+    <div>Travel Journal <span>— notes from the road</span></div>
+    <div>Closed Loop Site <span>— closedloopintel.com source</span></div>
+  </div>
+  <p style="margin-top:22px"><a class="plink" href="https://github.com/mbs5">All 113 repos on GitHub →</a></p>
+</section>
+
+</div><!-- /wrap -->
+
+<footer id="contact">
+  <div class="fin">◆ ◆ ◆</div>
+  <a href="mailto:hello@closedloopintel.com">hello@closedloopintel.com</a>
+  <a href="https://github.com/mbs5">GitHub</a>
+  <p>Built by hand, in the classical style.</p>
+</footer>
+
+<script>
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+  }), {threshold: 0.08});
+  document.querySelectorAll('section').forEach(s => io.observe(s));
+</script>
+</body>
+</html>
