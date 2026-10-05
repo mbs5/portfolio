@@ -44,7 +44,7 @@
   /* 4. Mobile CTA bar: show after the first two sections, hide on the contact block */
   const bar=$('.ctabar'); if(bar){document.body.classList.add('has-bar'); let early=true, contactVis=false; const upd=()=>bar.classList.toggle('show',!early&&!contactVis);
     new IntersectionObserver(([e])=>{early=e.isIntersecting||e.boundingClientRect.top>0;upd();},{threshold:0}).observe($('#operations'));
-    new IntersectionObserver(([e])=>{contactVis=e.isIntersecting;upd();},{threshold:.1}).observe($('#contact'));}
+    new IntersectionObserver(([e])=>{contactVis=e.isIntersecting;upd();},{threshold:0,rootMargin:'0px 0px -40% 0px'}).observe($('#contact'));}
 
   /* 5. Reveal fallback for browsers without scroll-driven animations */
   if(!CSS.supports('animation-timeline: view()')&&!reduced){

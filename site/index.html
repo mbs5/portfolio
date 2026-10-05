@@ -83,7 +83,7 @@
           <g class="store"><rect class="bx hi" x="195" y="34" width="130" height="64" rx="6"/><text x="260" y="62" text-anchor="middle">Brand B</text><text class="m" x="260" y="82" text-anchor="middle">sells one vial</text></g>
           <g class="store"><rect class="bx" x="360" y="34" width="130" height="64" rx="6"/><text x="425" y="62" text-anchor="middle">Brand C</text><text class="m" x="425" y="82" text-anchor="middle">reads 41 in stock</text></g>
           <path class="l" d="M260 98 V150"/><path d="M255 150 L260 158 L265 150 Z" fill="var(--bronze)"/>
-          <path class="l soft" d="M95 98 V158 M425 98 V158"/>
+          <path class="l soft" d="M95 104 V158 M425 104 V158"/><path d="M90 104 L95 96 L100 104 Z M420 104 L425 96 L430 104 Z" fill="var(--bronze)" opacity=".7"/>
           <rect class="hub" x="30" y="158" width="460" height="74" rx="37"/>
           <text class="big" x="260" y="190" text-anchor="middle" style="fill:var(--bg)">one stock count</text>
           <text class="m" x="260" y="212" text-anchor="middle" style="fill:var(--rule)">42 becomes 41 for every brand at once</text>
@@ -113,30 +113,30 @@
         <h3>Eight storefronts. One contract they are moving onto.</h3>
         <span class="own">Solo. Built October 2026. Next.js 15, Tailwind, Turborepo.</span>
         <p>Every supplement storefront needs the same surfaces: hero, catalog, product page, cart, checkout, account, proof of testing, compliance gates. Rebuilding them per brand is slow, and copying one brand's site into another leaves colours and images bleeding through.</p>
-        <p>StoreKit is a monorepo of eight themed storefronts, one image pipeline that puts each brand's mark on the glass, and a written token contract: colour ramps, surfaces and type as CSS variables in one <span class="mono">tokens.css</span>, so components read variables instead of hex. Eight demo brands show the range.</p>
+        <p>StoreKit is a monorepo of eight themed storefronts, one image pipeline that puts each brand's mark on the glass, and a written token contract: colour ramps, surfaces and type as CSS variables in one <span class="mono">tokens.css</span>, so that components read variables instead of hex. Eight demo brands show the range.</p>
         <p class="m">Today: eight themed stores, each with its own styles, and a written contract in @storekit/ui. Next: wiring every app to the preset, then lifting the shared components out and publishing them.</p>
         <ul class="facts"><li>8 demo stores live on Vercel</li><li>114 logo-locked AI product renders</li><li>Each demo serves its own catalog snapshot</li></ul>
         <div class="links"><a class="plink" href="mailto:muhammad@closedloopintel.com?subject=StoreKit%20source">Source on request</a></div>
       </div>
       <div class="media">
         <div class="swatches" role="list" aria-label="The eight demo brands">
-          <a role="listitem" class="sw" style="--c:#2749cb" href="https://vanta-bio-ash-rahmans-projects-c41122ac.vercel.app" target="_blank" rel="noopener"><span class="chip"></span><b>Vanta Bio</b><small>cobalt</small></a>
-          <a role="listitem" class="sw" style="--c:#b8862b" href="https://halcyon-labs-tau.vercel.app" target="_blank" rel="noopener"><span class="chip"></span><b>Halcyon Labs</b><small>gold on graphite</small></a>
-          <a role="listitem" class="sw" style="--c:#c77138" href="https://caldera-peptides.vercel.app" target="_blank" rel="noopener"><span class="chip"></span><b>Caldera</b><small>oxblood and gold</small></a>
-          <a role="listitem" class="sw" style="--c:#806e3a" href="https://solace-bio-ten.vercel.app" target="_blank" rel="noopener"><span class="chip"></span><b>Solace Bio</b><small>sage</small></a>
-          <a role="listitem" class="sw" style="--c:#7e60fc" href="https://lumen-peptides-ruddy.vercel.app" target="_blank" rel="noopener"><span class="chip"></span><b>Lumen</b><small>violet</small></a>
-          <a role="listitem" class="sw" style="--c:#de9d55" href="https://keystone-peptides-ten.vercel.app" target="_blank" rel="noopener"><span class="chip"></span><b>Keystone</b><small>amber on slate</small></a>
-          <a role="listitem" class="sw" style="--c:#81ae23" href="https://nucleus-peptides-two.vercel.app" target="_blank" rel="noopener"><span class="chip"></span><b>Nucleus</b><small>lime on black</small></a>
-          <a role="listitem" class="sw" style="--c:#91285e" href="https://vector-peptides-beta.vercel.app" target="_blank" rel="noopener"><span class="chip"></span><b>Vector</b><small>magenta on graphite</small></a>
+          <a role="listitem" class="sw" style="--c:#2749cb;--g:#f4f6fb" href="https://vanta-bio-ash-rahmans-projects-c41122ac.vercel.app" target="_blank" rel="noopener"><span class="chip"><i></i></span><b>Vanta Bio <span class="arr">↗</span></b><small>cobalt</small></a>
+          <a role="listitem" class="sw" style="--c:#b8862b;--g:#1f1f22" href="https://halcyon-labs-tau.vercel.app" target="_blank" rel="noopener"><span class="chip"><i></i></span><b>Halcyon Labs <span class="arr">↗</span></b><small>gold on graphite</small></a>
+          <a role="listitem" class="sw" style="--c:#7a1f1f;--g:#c9a24a" href="https://caldera-peptides.vercel.app" target="_blank" rel="noopener"><span class="chip"><i></i></span><b>Caldera <span class="arr">↗</span></b><small>oxblood and gold</small></a>
+          <a role="listitem" class="sw" style="--c:#7d8f6a;--g:#f3f1ea" href="https://solace-bio-ten.vercel.app" target="_blank" rel="noopener"><span class="chip"><i></i></span><b>Solace Bio <span class="arr">↗</span></b><small>sage</small></a>
+          <a role="listitem" class="sw" style="--c:#7e60fc;--g:#faf8ff" href="https://lumen-peptides-ruddy.vercel.app" target="_blank" rel="noopener"><span class="chip"><i></i></span><b>Lumen <span class="arr">↗</span></b><small>violet</small></a>
+          <a role="listitem" class="sw" style="--c:#de9d55;--g:#2d3139" href="https://keystone-peptides-ten.vercel.app" target="_blank" rel="noopener"><span class="chip"><i></i></span><b>Keystone <span class="arr">↗</span></b><small>amber on slate</small></a>
+          <a role="listitem" class="sw" style="--c:#81ae23;--g:#0e0e0e" href="https://nucleus-peptides-two.vercel.app" target="_blank" rel="noopener"><span class="chip"><i></i></span><b>Nucleus <span class="arr">↗</span></b><small>lime on black</small></a>
+          <a role="listitem" class="sw" style="--c:#91285e;--g:#232326" href="https://vector-peptides-beta.vercel.app" target="_blank" rel="noopener"><span class="chip"><i></i></span><b>Vector <span class="arr">↗</span></b><small>magenta on graphite</small></a>
         </div>
-        <pre class="tokens" aria-label="Token contract excerpt"><b>/* tokens.css, one file per brand */</b>
+        <pre class="tokens" aria-label="Token contract excerpt"><b>/* the contract: tokens.css */</b>
 :root {
   --c-brand-500: <span class="v">39 73 203</span>;   <b>/* primary action */</b>
   --c-neutral-900: <span class="v">24 28 36</span>;
   --font-display: <span class="v">var(--brand-font)</span>;
 }
-<b>/* components: bg-brand-500/20, text-brand-500 */</b></pre>
-        <p class="cap">Values shown are Vanta Bio's, read from the live store. Each card opens that brand's demo.</p>
+<b>/* components read these, never hex */</b></pre>
+        <p class="cap">Each card is a live demo. Token values shown are Vanta Bio's, read from its store.</p>
       </div>
     </div>
   </div>
@@ -156,15 +156,17 @@
         <div class="links"><a class="plink" href="https://agriful-story.vercel.app" target="_blank" rel="noopener">Read the story ↗</a></div>
       </div>
       <div class="media">
-        <ul class="ledger" aria-label="What one day looks like in EggFlow">
-          <li><span class="k">06:40</span><b>Production</b><span>Vet logs 57 petti 4 trays for house 2. Feed and losses on the same screen.</span></li>
-          <li><span class="k">12:05</span><b>Sale</b><span>150 petti to Al-Noor Traders. Rs 3,00,000 cash, Rs 4,50,000 online, Rs 3,30,000 on credit.</span></li>
+        <ul class="ledger" aria-label="What one day looks like in EggFlow, illustrative numbers">
+          <li><span class="k">06:40</span><b>Production</b><span>Vet logs 57 petti and 4 trays for house 2 (a petti is 12 trays, 360 eggs). Feed and losses on the same screen.</span></li>
+          <li><span class="k">12:05</span><b>Sale</b><span>150 petti to a dealer. Rs 3,00,000 cash, Rs 4,50,000 online, Rs 3,30,000 on credit.</span></li>
           <li><span class="k">16:20</span><b>Collections</b><span>Every rupee owed is bucketed by age: 0 to 30 days, 31 to 60, over 60.</span></li>
           <li><span class="k">17:02</span><b>Bill scan</b><span>A photo of a handwritten memo becomes a filled form: customer, memo number, total, paid, credit.</span></li>
           <li><span class="k">21:00</span><b>Day close</b><span>Closes only when production, sales and cash reconcile.</span></li>
         </ul>
+        <p class="cap">One day in EggFlow. Numbers are illustrative; the shapes are real.</p>
       </div>
-      <div class="strip">
+    </div>
+      <div class="strip reveal">
         <div class="strip-in">
         <svg class="diagram bp" viewBox="0 0 640 300" role="img" aria-label="Service blueprint: need, order, credit check, dispatch, delivery, payment, plan">
           <g>
@@ -189,7 +191,6 @@
         </div>
         <p class="cap">Agriful, one order start to finish. Rows are people, columns are steps. <span class="hint">Scroll sideways.</span></p>
       </div>
-    </div>
   </div>
 </section>
 
@@ -214,7 +215,7 @@
           <text x="251" y="138" text-anchor="middle" style="fill:var(--bg)">agent proposes</text>
           <text class="m" x="251" y="158" text-anchor="middle" style="fill:var(--rule)">confidence + evidence</text><text class="m" x="251" y="176" text-anchor="middle" style="fill:var(--rule)">per field</text>
           <rect class="bx" x="360" y="108" width="82" height="84" rx="6"/><text x="401" y="140" text-anchor="middle">Family</text><text x="401" y="156" text-anchor="middle">approves</text><text class="m" x="401" y="178" text-anchor="middle">the queue</text>
-          <rect class="bx" x="456" y="118" width="54" height="64" rx="6"/><text x="483" y="146" text-anchor="middle">Record</text><text class="m" x="483" y="166" text-anchor="middle">versioned</text>
+          <rect class="bx" x="452" y="118" width="62" height="64" rx="6"/><text x="483" y="152" text-anchor="middle">Record</text>
           <path class="l" d="M136 88 C156 88 156 150 176 150 M136 212 C156 212 156 150 176 150 M326 150 H360 M442 150 H456"/>
         </svg></div><div class="port"><svg class="diagram" viewBox="0 0 340 380" role="img" aria-label="Flow: voice note or photo, agent proposal with confidence and evidence, family confirmation queue, record">
   <rect class="bx" x="16" y="16" width="148" height="56" rx="6"/><text x="90" y="40" text-anchor="middle">Voice note</text><text class="m" x="90" y="58" text-anchor="middle">or prescription photo</text>
@@ -258,7 +259,7 @@
   <div class="wrap">
     <div class="sec-head reveal"><span class="k">06</span><h2>How I work</h2></div>
     <div class="how-grid reveal">
-      <p><b>Ship to production, then iterate.</b> Most of what is on this page is running in production; click through. EggFlow went live on 24 July 2026 and has been in use at the farms since.</p>
+      <p><b>Ship to production, then iterate.</b> EggFlow, Peptiful and Healthpedia are in use; click through. EggFlow went live on 24 July 2026 with real farm data entered the same day.</p>
       <p><b>Pin the truth with tests.</b> EggFlow's eighty-seven tests encode the real monthly sheets, so a refactor cannot quietly change a number on the monthly report.</p>
       <p><b>Agents propose, humans publish.</b> In Healthpedia the model drafts and a family member approves, and every proposed field carries its confidence and its evidence.</p>
       <p><b>One contract, many surfaces.</b> StoreKit and Peptiful both come from the same habit: build the engine once, then let brands, farms or clinics wear it.</p>
@@ -271,7 +272,7 @@
   <img class="plate" src="assets/plates/contact.webp" width="900" height="596" alt="" aria-hidden="true" loading="lazy" decoding="async">
   <div class="wrap">
     <div class="sec-head reveal"><span class="k">07</span><h2>Contact</h2></div>
-    <h2 class="ch reveal">If you're building commerce infrastructure, or a business that should run itself, write to me.</h2>
+    <h2 class="ch reveal">If you’re building commerce infrastructure, or a business that should run itself, write to me.</h2>
     <div class="actions reveal">
       <a class="btn solid big" href="mailto:muhammad@closedloopintel.com?subject=Hello%20from%20your%20portfolio">Email muhammad@closedloopintel.com</a>
       <button class="btn big copy" type="button" data-email="muhammad@closedloopintel.com">Copy the address</button>
@@ -282,7 +283,7 @@
       <li><a href="https://x.com/mbsdot" target="_blank" rel="noopener">X, @mbsdot</a></li>
       <li><a href="https://github.com/mbs5?tab=repositories" target="_blank" rel="noopener">GitHub, mbs5</a> <small>everything else lives here</small></li>
     </ul>
-    <div class="foot-line reveal"><span>Buffalo, New York, and Lahore. Replies within two days.</span><span><a href="https://github.com/mbs5/portfolio" target="_blank" rel="noopener">Source</a></span></div>
+    <div class="foot-line reveal"><span>Buffalo, New York, and Lahore.</span><span><a href="https://github.com/mbs5/portfolio" target="_blank" rel="noopener">Source</a></span></div>
   </div>
 </footer>
 
