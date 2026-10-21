@@ -27,24 +27,42 @@ body::before{content:"";position:fixed;inset:0;background:var(--grain);opacity:.
 .poster::after{content:"";position:absolute;inset:0;background:var(--grain);opacity:.55;pointer-events:none;z-index:-1}
 
 /* links that read as text */
-.plink,.more a,.mail a,.links a,.mast li a{text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:.22em;text-decoration-color:currentColor}
-.plink:hover,.more a:hover{color:var(--tangerine)}
+.plink,.mail a,.links a,.mast li a{text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:.22em;text-decoration-color:currentColor}
+.plink:hover{color:var(--tangerine)}
 
-/* hero: the poster */
-.hero{background:var(--tangerine);color:var(--cherry);padding:0 0 clamp(64px,10vh,112px)}
-.mast{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
-.mast .mark{font:400 30px/1 var(--display);letter-spacing:.04em;color:var(--blue);display:inline-flex;align-items:center;min-height:40px}
-.mast ul{display:flex;gap:22px;font-size:15.5px;font-weight:500}
-.mast li a{display:inline-flex;align-items:center;min-height:36px;text-decoration-color:transparent}
-.mast li a:hover{text-decoration-color:currentColor}
-.kicker{margin-top:clamp(48px,10vh,104px);font:400 22px/1 var(--display);letter-spacing:.14em;text-transform:uppercase}
-.hero h1{margin-top:10px;font:400 clamp(88px,15.5vw,184px)/.86 var(--display);text-transform:uppercase;letter-spacing:.005em;color:var(--blue)}
-.line{margin-top:28px;max-width:24ch;font-size:clamp(24px,3vw,32px);line-height:1.22;font-weight:500;letter-spacing:-.015em;text-wrap:balance}
-.sub{margin-top:18px;max-width:46ch;font-size:16.5px}
-.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+/* hero: dark band, one giant title, two columns, a sticker stage with the cutout */
+.hero{background:var(--cherry);color:var(--paper);padding:0}
+.hero-in{display:flex;flex-direction:column;min-height:100svh}
+.hero .mast{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
+.hero .mast .mark{font:400 30px/1 var(--display);letter-spacing:.04em;color:var(--tangerine);display:inline-flex;align-items:center;min-height:40px}
+.hero .mast ul{display:flex;gap:22px;font-size:15.5px;font-weight:500}
+.hero .mast li a{display:inline-flex;align-items:center;min-height:36px;color:var(--paper);text-decoration-color:transparent}
+.hero .mast li a:hover{text-decoration-color:currentColor}
+.hero h1{margin-top:clamp(24px,5vh,56px);font:400 clamp(72px,11.8vw,176px)/.88 var(--display);text-transform:uppercase;letter-spacing:.005em;color:var(--blue);white-space:nowrap}
+.intro{display:grid;grid-template-columns:1fr 1fr auto;gap:32px;align-items:start;margin-top:22px;font-size:15.5px;line-height:1.5;color:color-mix(in srgb,var(--paper) 78%,var(--cherry))}
+.intro p{max-width:40ch}
+.cta{display:inline-flex;align-items:center;gap:8px;align-self:center;justify-self:end;min-height:44px;padding:0 4px;font-weight:700;font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:var(--paper);border-bottom:2px solid var(--tangerine);position:relative}
+.cta .arrow{display:inline-block;color:var(--tangerine);animation:arrow-bob 1.8s ease-in-out infinite}
+.cta:hover{color:var(--tangerine)}
+@keyframes arrow-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(4px)}}
+.stage{position:relative;flex:1;min-height:420px;margin-top:28px;margin-bottom:0;border-radius:0 240px 0 0;background:var(--paper) var(--grain);background-image:var(--grain),linear-gradient(var(--rule) 1px,transparent 1px),linear-gradient(90deg,var(--rule) 1px,transparent 1px);background-size:220px 220px,72px 72px,72px 72px;overflow:hidden;isolation:isolate}
+.cut{position:absolute;left:50%;bottom:0;height:min(98%,660px);z-index:1;width:auto;transform:translateX(-50%);filter:drop-shadow(0 18px 24px rgba(53,30,40,.28))}
+.stk{position:absolute;display:inline-block;padding:14px 20px;border-radius:14px;font:400 clamp(22px,2.3vw,34px)/.95 var(--display);text-transform:uppercase;letter-spacing:.02em;text-align:center;box-shadow:0 10px 20px rgba(53,30,40,.18);transition:transform .25s cubic-bezier(.2,.7,.2,1)}
+.stk:hover{transform:rotate(0) scale(1.06)!important;z-index:3}
+.stk-1{left:12%;top:10%;transform:rotate(-8deg);background:var(--tangerine);color:var(--cherry);border-radius:999px;padding:24px 26px}
+.stk-2{left:22%;top:50%;transform:rotate(5deg);background:var(--blue);color:var(--cherry)}
+.stk-3{left:33%;top:76%;z-index:2;transform:rotate(-4deg);background:var(--cherry);color:var(--blue)}
+.stk-4{right:24%;top:12%;z-index:2;transform:rotate(6deg);background:var(--cherry);color:var(--paper)}
+.stk-5{right:13%;top:42%;transform:rotate(-7deg);background:var(--blue);color:var(--cherry)}
+.stk-6{right:20%;top:70%;z-index:2;transform:rotate(4deg);background:var(--tangerine);color:var(--cherry);border-radius:999px;padding:22px 24px}
 .btn{display:inline-flex;align-items:center;min-height:44px;padding:0 22px;border:2px solid var(--cherry);border-radius:999px;font-weight:600;font-size:16px;transition:background .15s,color .15s}
 .btn:first-child{background:var(--cherry);color:var(--blue)}
 .btn:hover{background:var(--blue);color:var(--cherry)}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.kicker{font:400 22px/1 var(--display);letter-spacing:.14em;text-transform:uppercase}
+.line{margin-top:28px;max-width:24ch;font-size:clamp(24px,3vw,32px);line-height:1.22;font-weight:500}
+.hero:not(:has(.hero-in)){background:var(--tangerine);color:var(--cherry);padding-bottom:clamp(64px,10vh,112px)}
+.hero:not(:has(.hero-in)) h1{color:var(--blue);white-space:normal}
 
 /* section titles */
 .sec-t{font:400 clamp(48px,6vw,72px)/.9 var(--display);text-transform:uppercase;letter-spacing:.01em;padding-bottom:18px;border-bottom:2px solid var(--cherry)}
@@ -70,12 +88,12 @@ body::before{content:"";position:fixed;inset:0;background:var(--grain);opacity:.
 .feat .what{font-size:20px}
 .feat .go{margin-top:18px}
 
+/* more: three smaller cards */
+.grid-3{grid-template-columns:repeat(3,minmax(0,1fr));gap:48px 28px;margin-top:40px}
+.grid-3 .t{font-size:34px}
+.grid-3 .what{font-size:16px}
 /* more */
 .more{padding:clamp(72px,10vh,112px) 0 clamp(72px,10vh,112px)}
-.more ul{margin-top:8px}
-.more li{display:grid;grid-template-columns:200px 1fr;gap:6px 24px;padding:18px 0;border-bottom:1px solid var(--rule);align-items:baseline}
-.more li a{font-weight:600;justify-self:start;min-height:28px;display:inline-flex;align-items:center}
-.more li span{font-size:16px;opacity:.8}
 
 /* contact: the closing poster */
 .contact{background:var(--cherry);color:var(--blue);padding:clamp(80px,12vh,128px) 0 64px}
@@ -95,6 +113,9 @@ body::before{content:"";position:fixed;inset:0;background:var(--grain);opacity:.
   body{font-size:16px}
   .mast ul{gap:16px;font-size:15px}
   .grid{gap:36px 14px;margin-top:28px}
+  .grid-3{grid-template-columns:repeat(2,minmax(0,1fr));gap:36px 14px}
+  .grid-3 .t{font-size:28px}
+  .grid-3 .what{font-size:14px}
   .feat .card{grid-template-columns:1fr;gap:0}
   .feat .body{margin-top:16px}
   .feat .t{font-size:44px}
@@ -106,7 +127,20 @@ body::before{content:"";position:fixed;inset:0;background:var(--grain);opacity:.
   .meta{font-size:12.5px;margin-top:4px}
   .go{font-size:14px;padding-top:4px}
   .art{box-shadow:0 0 0 1.5px var(--cherry)}
-  .more li{grid-template-columns:1fr;gap:2px}
 }
-@media (max-width:380px){.mast ul{gap:12px;font-size:14px}.hero h1{font-size:80px}}
-@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media (max-width:760px){
+  .hero h1{font-size:clamp(54px,15.5vw,80px);white-space:normal;line-height:.9}
+  .intro{grid-template-columns:1fr;gap:12px;font-size:15px}
+  .cta{justify-self:start;margin-top:4px}
+  .stage{min-height:460px;border-radius:0 120px 0 0;margin-top:20px}
+  .cut{height:min(78%,440px)}
+  .stk{padding:10px 14px;font-size:17px;box-shadow:0 6px 14px rgba(53,30,40,.18)}
+  .stk-1{left:4%;top:6%;padding:16px 18px}
+  .stk-2{left:3%;top:40%}
+  .stk-3{left:6%;top:76%}
+  .stk-4{right:4%;top:8%}
+  .stk-5{right:3%;top:38%}
+  .stk-6{right:5%;top:70%;padding:14px 16px}
+}
+@media (max-width:380px){.mast ul{gap:12px;font-size:14px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
