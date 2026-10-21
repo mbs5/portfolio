@@ -35,6 +35,7 @@ Source of truth for claims: notes/facts.md. Research: notes/research-0*.md. Skil
 18. Hosted showcase with a brand switcher over one real app.
 
 ## Pass log
+- 2026-10-21, pass 16. Cutout redone through KIE gpt-image-2: original photo padded and outpainted so the left arm and torso complete below the waist, face and colours held, then re-cut (assets/me-cut.webp, 920x1755). Fixes the missing arm and the stripe-line crop.
 - 2026-10-21, pass 15. Cutout regenerated sharper: original photo upscaled with gpt-image-2 (restoration prompt, same face, same colours; the Flare model drifted and was rejected), cut out again, exported at 920 px wide.
 - 2026-10-21, pass 14. Product Engineer title, colour rugby-shirt cutout, breadth stickers (no tech names). See site/snapshots/pass-14/NOTES.md.
 - 2026-10-21, pass 13. Hero to the reference: MB signature mark, black and white cutout, reference-style stickers with marks and second lines, UB seal badge, stage flush with the band. See site/snapshots/pass-13/NOTES.md.
