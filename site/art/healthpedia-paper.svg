@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="A table top with a loose pile of handwritten prescription slips, a printed record sheet carrying a starred sticky note, a phone showing a chat with a voice note, and a pen, the way the family kept the record before the software.">
+  <defs>
+    <filter id="wobble" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3.2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3" result="noise"/>
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0.208  0 0 0 0 0.118  0 0 0 0 0.157  3.5 0 0 0 -2.1" result="specks"/>
+      <feComposite in="specks" in2="SourceGraphic" operator="in" result="ink"/>
+      <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="ink"/></feMerge>
+    </filter>
+  </defs>
+  <g filter="url(#grain)">
+    <rect width="800" height="600" fill="#FF5C34"/>
+    <g filter="url(#wobble)">
+      <g transform="translate(4 3)" fill="#D7EFFF" stroke="none">
+        <path transform="rotate(-4 355 300)" d="M246 128 C300 125 410 124 464 127 C468 220 474 380 474 468 C400 471 300 471 233 469 C235 380 240 220 246 128 Z"/>
+
+        <path transform="rotate(9 600 285)" d="M552 155 L646 154 L648 400 L553 401 Z"/>
+        <!-- pen barrel -->
+        <path transform="translate(452 512) rotate(-17)" d="M28 -10 C70 -12 130 -12 168 -11 L168 11 C130 12 70 12 28 10 C20 7 20 -7 28 -10 Z"/>
+      </g>
+      <g fill="none" stroke="#351E28" stroke-linecap="round" stroke-linejoin="round">
+        <!-- record sheet -->
+        <g transform="rotate(-4 355 300)">
+          <path stroke-width="6" d="M246 128 C300 125 410 124 464 127 C468 220 474 380 474 468 C400 471 300 471 233 469 C235 380 240 220 246 128 Z"/>
+          <path fill="#351E28" stroke="none" d="M258 148 L452 146 L453 172 L258 173 Z"/>
+          <path stroke-width="3" d="M256 190 L455 189"/>
+          <path stroke-width="3.5" d="M318 196 L318 450"/>
+          <path fill="#351E28" stroke="none" d="M260 210 L300 209 L300 219 L260 220 Z M260 250 L294 249 L294 259 L260 260 Z M260 290 L302 289 L302 299 L260 300 Z M260 330 L290 329 L290 339 L260 340 Z M260 370 L298 369 L298 379 L260 380 Z M260 410 L292 409 L292 419 L260 420 Z"/>
+          <path stroke-width="3.5" d="M334 215 L430 214 M334 255 L402 254 M334 295 L440 294 M334 375 L424 374 M334 415 L410 414"/>
+          <path stroke-width="3" d="M336 338 c3 -9 8 -9 8 0 c0 5 -4 5 -2 1 c2 -6 7 -7 8 0 c1 5 4 5 6 1 c2 -7 5 -8 7 0 c1 4 3 6 6 1 c2 -5 2 -11 5 -10 c2 1 -1 9 2 10 c3 1 5 -5 8 -5 c3 0 3 4 6 2 m8 0 c2 -7 6 -7 6 0 c0 4 3 5 5 0 c2 -6 6 -6 6 0 c1 5 4 5 6 0 c2 -5 5 -6 7 -1 c1 3 3 4 6 1"/>
+          <path stroke-width="3" d="M256 235 L455 234 M256 275 L455 274 M256 315 L455 314 M256 355 L455 354 M256 395 L455 394 M256 435 L455 434"/>
+        </g>
+        <!-- cup of tea on a saucer, seen from above -->
+        <g transform="translate(-6 -38)">
+          <path transform="translate(4 3)" fill="#D7EFFF" stroke="none" d="M100 178 C98 150 128 132 164 132 C200 132 228 150 226 178 C226 204 198 222 164 222 C128 222 100 204 100 178 Z"/>
+          <path stroke-width="6" d="M100 178 C98 150 128 132 164 132 C200 132 228 150 226 178 C226 204 198 222 164 222 C128 222 100 204 100 178 Z"/>
+          <path stroke-width="3.5" d="M114 186 C122 204 142 212 164 212 C186 212 206 204 214 188"/>
+          <path fill="#351E28" stroke="none" d="M124 170 C124 184 140 200 162 200 C186 200 202 186 204 170 C204 188 188 206 162 206 C138 206 122 190 124 170 Z"/>
+          <path transform="translate(4 3)" fill="#D7EFFF" stroke="none" d="M122 166 C121 148 140 138 164 138 C188 138 207 148 206 166 C206 182 188 192 164 192 C140 192 122 182 122 166 Z"/>
+          <path stroke-width="6" d="M122 166 C121 148 140 138 164 138 C188 138 207 148 206 166 C206 182 188 192 164 192 C140 192 122 182 122 166 Z"/>
+          <path fill="#351E28" stroke="none" d="M132 166 C132 154 146 148 164 148 C182 148 196 154 196 166 C196 176 182 182 164 182 C146 182 132 176 132 166 Z"/>
+          <path stroke-width="5" d="M205 160 C218 154 230 160 228 170 C226 179 216 182 206 178"/>
+          <path stroke-width="3" d="M150 156 C156 153 164 152 170 153"/>
+        </g>
+        <!-- prescription slips, a loose pile -->
+        <g transform="translate(196 418) rotate(-15)"><path transform="translate(4 3)" fill="#D7EFFF" stroke="none" d="M-72 -48 C-30 -50 30 -51 71 -49 C73 -20 72 20 70 49 C30 51 -30 51 -71 50 C-73 20 -73 -20 -72 -48 Z"/><path stroke-width="6" d="M-72 -48 C-30 -50 30 -51 71 -49 C73 -20 72 20 70 49 C30 51 -30 51 -71 50 C-73 20 -73 -20 -72 -48 Z"/><circle cx="-54" cy="-31" r="7" fill="#351E28" stroke="none"/><path stroke-width="3.5" d="M-40 -32 L10 -33 M-40 -22 L-8 -22"/><path stroke-width="3" d="M-60 -10 L60 -11"/><path stroke-width="3" d="M-58 8 c3 -9 8 -9 8 0 c0 5 -4 5 -2 1 c2 -6 7 -7 8 0 c1 5 4 5 6 1 c2 -7 5 -8 7 0 c1 4 3 6 6 1 c2 -5 2 -11 5 -10 c2 1 -1 9 2 10 c3 1 5 -5 8 -5 c3 0 3 4 6 2 M-56 28 c2 -7 6 -7 6 0 c0 4 3 5 5 0 c2 -6 6 -6 6 0 c1 5 4 5 6 0 c2 -5 5 -6 7 -1 c1 3 3 4 6 1"/><path stroke-width="3" d="M30 40 c5 -11 10 -12 10 -6 c0 6 -8 6 -5 0 c3 -6 11 -8 13 -2 c1 3 5 2 8 -3"/></g>
+        <g transform="translate(258 462) rotate(8)"><path transform="translate(4 3)" fill="#D7EFFF" stroke="none" d="M-72 -48 C-30 -50 30 -51 71 -49 C73 -20 72 20 70 49 C30 51 -30 51 -71 50 C-73 20 -73 -20 -72 -48 Z"/><path stroke-width="6" d="M-72 -48 C-30 -50 30 -51 71 -49 C73 -20 72 20 70 49 C30 51 -30 51 -71 50 C-73 20 -73 -20 -72 -48 Z"/><circle cx="-54" cy="-31" r="7" fill="#351E28" stroke="none"/><path stroke-width="3.5" d="M-40 -32 L10 -33 M-40 -22 L-8 -22"/><path stroke-width="3" d="M-60 -10 L60 -11"/><path stroke-width="3" d="M-58 8 c2 -7 6 -7 6 0 c0 4 3 5 5 0 c2 -6 6 -6 6 0 c1 5 4 5 6 0 c2 -5 5 -6 7 -1 c1 3 3 4 6 1 m8 0 c2 -7 6 -7 6 0 c0 4 3 5 5 0 c2 -6 6 -6 6 0 c1 5 4 5 6 0 c2 -5 5 -6 7 -1 c1 3 3 4 6 1 M-56 28 c2 -7 6 -7 6 0 c0 4 3 5 5 0 c2 -6 6 -6 6 0 c1 5 4 5 6 0 c2 -5 5 -6 7 -1 c1 3 3 4 6 1"/><path stroke-width="3" d="M30 40 c5 -11 10 -12 10 -6 c0 6 -8 6 -5 0 c3 -6 11 -8 13 -2 c1 3 5 2 8 -3"/></g>
+        <g transform="translate(178 488) rotate(-4)"><path transform="translate(4 3)" fill="#D7EFFF" stroke="none" d="M-72 -48 C-30 -50 30 -51 71 -49 C73 -20 72 20 70 49 C30 51 -30 51 -71 50 C-73 20 -73 -20 -72 -48 Z"/><path stroke-width="6" d="M-72 -48 C-30 -50 30 -51 71 -49 C73 -20 72 20 70 49 C30 51 -30 51 -71 50 C-73 20 -73 -20 -72 -48 Z"/><circle cx="-54" cy="-31" r="7" fill="#351E28" stroke="none"/><path stroke-width="3.5" d="M-40 -32 L10 -33 M-40 -22 L-8 -22"/><path stroke-width="3" d="M-60 -10 L60 -11"/><path stroke-width="3" d="M-58 8 c3 -9 8 -9 8 0 c0 5 -4 5 -2 1 c2 -6 7 -7 8 0 c1 5 4 5 6 1 c2 -7 5 -8 7 0 c1 4 3 6 6 1 c2 -5 2 -11 5 -10 c2 1 -1 9 2 10 c3 1 5 -5 8 -5 c3 0 3 4 6 2 m8 0 c2 -7 6 -7 6 0 c0 4 3 5 5 0 c2 -6 6 -6 6 0 c1 5 4 5 6 0 c2 -5 5 -6 7 -1 c1 3 3 4 6 1 M-56 28 c2 -7 6 -7 6 0 c0 4 3 5 5 0 c2 -6 6 -6 6 0 c1 5 4 5 6 0 c2 -5 5 -6 7 -1 c1 3 3 4 6 1"/><path stroke-width="3" d="M30 40 c5 -11 10 -12 10 -6 c0 6 -8 6 -5 0 c3 -6 11 -8 13 -2 c1 3 5 2 8 -3"/></g>
+        <!-- sticky note on the sheet -->
+        <g transform="rotate(7 450 155)">
+          <path transform="translate(4 3)" fill="#D7EFFF" stroke="none" d="M392 98 C430 96 470 95 506 97 C508 130 508 160 507 186 L486 208 C455 209 425 209 393 210 C391 170 391 130 392 98 Z"/>
+          <path stroke-width="6" d="M392 98 C430 96 470 95 506 97 C508 130 508 160 507 186 L486 208 C455 209 425 209 393 210 C391 170 391 130 392 98 Z"/>
+          <path fill="#351E28" stroke="none" d="M507 186 L489 189 L486 208 Z"/>
+          <path fill="#351E28" stroke="none" d="M418.0 110.0 L421.5 119.1 L431.3 119.7 L423.7 125.9 L426.2 135.3 L418.0 130.0 L409.8 135.3 L412.3 125.9 L404.7 119.7 L414.5 119.1 Z"/>
+          <path stroke-width="3" d="M440 128 c2 -7 6 -7 6 0 c0 4 3 5 5 0 c2 -6 6 -6 6 0 c1 5 4 5 6 0 c2 -5 5 -6 7 -1 c1 3 3 4 6 1 M406 158 c3 -9 8 -9 8 0 c0 5 -4 5 -2 1 c2 -6 7 -7 8 0 c1 5 4 5 6 1 c2 -7 5 -8 7 0 c1 4 3 6 6 1 c2 -5 2 -11 5 -10 c2 1 -1 9 2 10 c3 1 5 -5 8 -5 c3 0 3 4 6 2 M406 184 c2 -7 6 -7 6 0 c0 4 3 5 5 0 c2 -6 6 -6 6 0 c1 5 4 5 6 0 c2 -5 5 -6 7 -1 c1 3 3 4 6 1"/>
+        </g>
+        <!-- phone with chat and a voice note -->
+        <g transform="rotate(9 600 285)">
+          <path fill="#351E28" stroke="none" fill-rule="evenodd" d="M544 150 C544 140 551 134 562 134 L640 133 C651 133 658 140 658 151 L661 418 C661 429 654 435 643 435 L563 436 C552 436 545 429 545 418 Z M557 160 L646 159 L648 400 L558 401 Z"/>
+          <path fill="#351E28" stroke="none" d="M658 151 L667 158 L670 424 C670 436 661 443 650 443 L570 444 C560 444 552 440 549 433 L643 435 C654 435 661 429 661 418 Z"/>
+          <path stroke-width="6" d="M544 150 C544 140 551 134 562 134 L640 133 C651 133 658 140 658 151 L661 418 C661 429 654 435 643 435 L563 436 C552 436 545 429 545 418 Z"/>
+          <circle cx="603" cy="146" r="4" fill="#D7EFFF" stroke="none"/>
+          <path stroke-width="3.5" d="M568 178 C590 177 614 177 622 178 C625 178 626 180 626 183 L626 205 C626 208 624 210 621 210 L582 210 L572 220 L574 210 L570 210 C567 210 566 208 566 205 L566 183 C566 180 567 178 568 178 Z"/>
+          <path stroke-width="3" d="M574 195 c2 -7 6 -7 6 0 c0 4 3 5 5 0 c2 -6 6 -6 6 0 c1 5 4 5 6 0 c2 -5 5 -6 7 -1 c1 3 3 4 6 1"/>
+          <path stroke-width="3.5" d="M572 238 C600 237 625 237 634 238 C637 238 639 240 639 243 L639 291 C639 294 637 296 634 296 L626 296 L624 306 L614 296 L572 296 C569 296 567 294 567 291 L567 243 C567 240 569 238 572 238 Z"/>
+          <path fill="#351E28" stroke="none" d="M576 254 L592 267 L576 280 Z"/>
+          <path stroke-width="3.5" d="M600 262 L600 272 M606 256 L606 278 M612 250 L612 284 M618 259 L618 275 M624 254 L624 280 M630 263 L630 271"/>
+          <path stroke-width="3.5" d="M590 326 C610 325 628 325 634 326 C637 326 638 328 638 331 L638 354 C638 357 637 359 634 359 L590 359 C587 359 585 357 585 354 L585 331 C585 328 587 326 590 326 Z"/>
+          <path stroke-width="3" d="M594 344 c2 -7 6 -7 6 0 c0 4 3 5 5 0 c2 -6 6 -6 6 0 c1 5 4 5 6 0 c2 -5 5 -6 7 -1 c1 3 3 4 6 1"/>
+        </g>
+        <!-- pen -->
+        <g transform="translate(452 512) rotate(-17)">
+          <path stroke-width="6" d="M28 -10 C70 -12 130 -12 168 -11 M168 11 C130 12 70 12 28 10"/>
+          <path stroke-width="5" d="M28 -10 C20 -7 12 -3 2 0 C12 3 20 7 28 10"/>
+          <path fill="#351E28" stroke="none" d="M2 0 L10 -3 L10 3 Z"/>
+          <path stroke-width="3.5" d="M44 -9 L44 9 M52 -9 L52 9 M60 -9 L60 9"/>
+          <path fill="#351E28" stroke="none" d="M140 -13 C170 -14 205 -13 218 -10 C224 -6 224 6 218 10 C205 13 170 14 140 13 Z"/>
+          <path stroke-width="4" d="M150 -14 C160 -22 196 -22 206 -18"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

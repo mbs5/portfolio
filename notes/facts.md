@@ -3,9 +3,11 @@
 Rule: nothing on the site may claim more than what is written here. Qualitative over invented numbers.
 
 ## Identity
-- Muhammad Bin Sohail. CTO / founding engineer at Built By Design (BBD). CS at University at Buffalo, graduating Summer 2027. Owner of Closed Loop Intelligence LLC (NY).
+- Muhammad Bin Sohail. Software engineer, founding team at Built By Design (BBD), July 2025 to October 2026. CS at University at Buffalo, graduating Summer 2027. Owner of Closed Loop Intelligence LLC (NY).
 - Email for the site: muhammad@closedloopintel.com. Instagram @muhammadbsohail, 16.5k followers (figure given by MBS). GitHub mbs5. X @mbsdot (memory: X dashboard). Based in Buffalo, New York, and Lahore (memory).
 - Peptiful revenue figure: "$12M a year" is OPERATOR-REPORTED. Always qualify.
+
+## StoreKit showcase app: https://storekit-eight.vercel.app (mbs5 Vercel, 200 on 2026-10-21, "the ecommerce component library you own"). The portfolio links here, not to a brand demo.
 
 ## StoreKit (headline, local repo ~/Desktop/Workspace/storekit, committed 2026-10-05, no remote yet)
 - VERIFIED 2026-10-05 against the repo: none of the eight apps imports @storekit/ui (no package.json dep, no preset, no CSS import). Each app ships its own src/styles/design-system.css with hex values. The shared package holds the written contract (preset.js, tokens.css, fonts.ts). Honest claim: eight themed storefronts + one image pipeline + a written token contract they are being moved onto. Never claim shared components or "no hex in components" as shipped.
@@ -20,7 +22,8 @@ Rule: nothing on the site may claim more than what is written here. Qualitative 
 - Honest caveat: packages/storekit today is the preset + tokens + fonts; the component variants live inside the apps. "Component library" is the direction, the shipped proof is 8 themed stores on one contract.
 
 ## Peptiful engine (BBD)
-- Timeline: central BBD build from October 2025 through 2026 (wiki). "2025 to now" is accurate.
+- Public site: https://www.peptiful.com (200 on 2026-10-21; title "Peptiful, White-Label Research Chemical Infrastructure"). Linked from the portfolio since pass 11.
+- Timeline: central BBD build from October 2025 through 2026 (wiki). BBD ended October 2026, so the page says "2025 to 2026" and past tense for his role (updated 2026-10-18).
 - Multi-tenant commerce + telehealth platform: one product list, one stock count, many branded storefronts; patient intake, physician matching, fulfillment/pharmacy backend, SMS automation, multi-tenant subaccounts. MBS owned UI + integration; backend by Advait. New brand goes live in days because the engine exists.
 - "Eight brands" was used in the Farhan deck; the portfolio currently says five white-label brands. Use "multiple white-label health brands" unless MBS confirms a number.
 
@@ -36,6 +39,8 @@ Rule: nothing on the site may claim more than what is written here. Qualitative 
 ## Healthpedia (healthpedia-beta.vercel.app)
 - Git: 2026-08-07 to 2026-08-15, solo. README: MCP server via mcp-handler with bearer auth; full version log on the record.
 - Family health record humans can read and AI agents can safely write to. Origin: hand-maintained PDF for a 76-year-old grandmother in Lahore, three doctors, conflicting plans. Agents propose, humans publish: MCP server, every proposed field carries confidence + evidence (cropped source image or the exact voice-note sentence), confirmation queue. Next.js, Postgres, Vercel Blob, mcp-handler.
+
+- Verified 2026-10-21 against the Healthpedia README and git log (8 commits, 2026-08-07 to 2026-08-15): record per member has timeline, medications, labs, documents with plain-language summaries, conflicting doctor opinions side by side, care team, red flags, full version log; every entry hand-editable. Confidence classified high/medium/low. Selective apply. Originals immutable, every fact links to its source document. Approval bumps the record version with attribution (which agent, which source, who approved). MCP at /api/mcp, streamable HTTP, bearer auth, plus a full OAuth 2.1 provider for claude.ai custom connectors (commit 2026-08-08). Tools: get_member_record, search_history, propose_update, add_document, get_pending_proposals, export_record; documents publish as immutable evidence, facts only through propose_update then approval. Disclaimer: family-maintained record, not medical advice. The PDF to feature mapping comes from MBS's own concept deck (docs/healthpedia-deck.html, 2026-08-07). Do NOT publish the grandmother's name, her medicines or the father's labs.
 
 ## Longevity OS (longevityos.builtbydesign.io)
 - Live page lists "AI coach" among the coach views. Claim only that it sits beside the human coach.

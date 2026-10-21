@@ -1,0 +1,33 @@
+{
+  "390": {
+    "overflow": false,
+    "imgs": [
+      "art/peptiful.svg:true:800:350",
+      "art/storekit.svg:true:800:350",
+      "art/eggflow.svg:true:800:350",
+      "art/healthpedia.svg:true:800:350"
+    ],
+    "fonts": [
+      "League Gothic",
+      "Instrument Sans",
+      "Kalam"
+    ],
+    "small": []
+  },
+  "1280": {
+    "overflow": false,
+    "imgs": [
+      "art/peptiful.svg:true:800:472",
+      "art/storekit.svg:true:800:472",
+      "art/eggflow.svg:true:800:472",
+      "art/healthpedia.svg:true:800:472"
+    ],
+    "fonts": [
+      "League Gothic",
+      "Instrument Sans",
+      "Kalam"
+    ],
+    "small": []
+  },
+  "console": []
+}

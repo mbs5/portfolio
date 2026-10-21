@@ -1,5 +1,6 @@
-@font-face{font-family:'Fraunces';font-style:normal;font-weight:300 700;font-display:swap;src:url(Fraunces-var.woff2) format('woff2')}
-@font-face{font-family:'Fraunces';font-style:italic;font-weight:300 700;font-display:swap;src:url(Fraunces-Italic-var.woff2) format('woff2')}
 @font-face{font-family:'Instrument Sans';font-style:normal;font-weight:400 700;font-display:swap;src:url(InstrumentSans-var.woff2) format('woff2')}
 @font-face{font-family:'Instrument Sans';font-style:italic;font-weight:400 700;font-display:swap;src:url(InstrumentSans-Italic-var.woff2) format('woff2')}
+
 @font-face{font-family:'JetBrains Mono';font-style:normal;font-weight:100 800;font-display:swap;src:url(JetBrainsMono-var.woff2) format('woff2')}
+@font-face{font-family:'League Gothic';font-style:normal;font-weight:400;font-display:swap;src:url(LeagueGothic-Regular.woff2) format('woff2')}
+@font-face{font-family:'Kalam';font-style:normal;font-weight:400;font-display:swap;src:url(Kalam-Regular.woff2) format('woff2')}

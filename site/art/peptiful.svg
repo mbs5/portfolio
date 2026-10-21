@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="One large stock jar on a counter feeds a single shared pipe into a row of small shopfronts, with a new shopfront still being built at the end of the line.">
+<defs>
+  <filter id="wobble" x="-5%" y="-5%" width="110%" height="110%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="7" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="3.2" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  <filter id="grain" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3" result="noise"/>
+    <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0.208  0 0 0 0 0.118  0 0 0 0 0.157  3.5 0 0 0 -2.1" result="specks"/>
+    <feComposite in="specks" in2="SourceGraphic" operator="in" result="ink"/>
+    <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="ink"/></feMerge>
+  </filter>
+</defs>
+<g filter="url(#grain)">
+  <rect width="800" height="600" fill="#FF5C34"/>
+  <g filter="url(#wobble)">
+    <g transform="translate(4 3)" fill="#D7EFFF" stroke="none">
+      <!-- jar glass above the stock line -->
+      <path d="M376,128 L373,149 C341,153 324,170 322,196 L321,208 C350,201 371,213 400,207 C430,201 451,213 478,206 L478,195 C476,168 460,151 428,148 L426,128 Z"/>
+      <path d="M360,128 C360,120 362,115 368,114 L433,114 C439,115 441,121 440,128 Z"/>
+      <path d="M386,114 L387,104 L414,104 L415,114 Z"/>
+      <path d="M400,72 C410,72 417,80 416,89 C415,98 408,104 399,104 C390,103 384,97 384,88 C385,79 391,72 400,72 Z"/>
+      <path d="M356,232 C356,226 359,224 365,224 L437,225 C443,225 446,228 446,234 L445,268 C445,274 442,276 436,276 L364,275 C359,275 356,272 356,267 Z"/>
+      <path d="M286,304 L514,303 L515,319 L285,320 Z"/>
+      <path d="M386,350 L414,349 L415,362 L385,363 Z"/>
+      <!-- shop one -->
+      <path fill-rule="evenodd" d="M108,432 L212,431 L213,529 L107,530 Z M116,446 L168,445 L169,500 L117,501 Z"/>
+      <path d="M104,412 L216,411 L215,430 C208,438 197,438 190,430 C183,438 172,438 165,430 C158,438 147,438 140,430 C133,438 122,438 115,430 C111,434 106,433 104,429 Z"/>
+      <!-- shop two -->
+      <path fill-rule="evenodd" d="M258,431 L362,432 L361,530 L259,529 Z M266,446 L318,446 L317,501 L267,500 Z"/>
+      <path d="M254,413 L366,412 L366,428 L352,438 L338,428 L324,438 L310,428 L296,438 L282,428 L268,438 L254,428 Z"/>
+      <!-- shop three -->
+      <path fill-rule="evenodd" d="M438,432 L542,431 L543,530 L437,529 Z M446,446 L498,445 L499,500 L447,501 Z"/>
+      <path d="M434,413 L546,412 L546,432 L434,433 Z"/>
+      <!-- new shop: one panel and half an awning in -->
+      <path d="M588,487 L640,486 L641,529 L587,530 Z"/>
+      <path d="M584,413 L640,412 L640,430 C633,438 622,438 615,430 C608,438 597,438 590,430 C588,433 585,433 584,430 Z"/>
+    </g>
+    <g fill="none" stroke="#351E28" stroke-linecap="round" stroke-linejoin="round">
+      <!-- one shared pipe, fanning out -->
+      <g stroke-width="12">
+        <path d="M400,344 L400,362"/>
+        <path d="M400,360 C399,386 162,370 160,401"/>
+        <path d="M400,360 C399,380 311,372 310,392"/>
+        <path d="M400,360 C401,380 489,376 490,398"/>
+        <path d="M400,360 C401,386 638,370 640,401"/>
+      </g>
+      <g stroke-width="6">
+        <!-- jar -->
+        <path d="M376,128 L373,149 C341,153 324,170 322,196 L320,282 C320,296 330,302 344,302 L456,303 C470,302 479,295 479,281 L478,195 C476,168 460,151 428,148 L426,128"/>
+        <path d="M360,128 C360,120 362,115 368,114 L433,114 C439,115 441,121 440,128 Z"/>
+        <path d="M386,114 L387,104 L414,104 L415,114"/>
+        <path d="M400,72 C410,72 417,80 416,89 C415,98 408,104 399,104 C390,103 384,97 384,88 C385,79 391,72 400,72 Z"/>
+        <path d="M356,232 C356,226 359,224 365,224 L437,225 C443,225 446,228 446,234 L445,268 C445,274 442,276 436,276 L364,275 C359,275 356,272 356,267 Z"/>
+        <path d="M286,304 L514,303 L515,319 L285,320 Z"/>
+        <path stroke-width="4.5" d="M386,350 L414,349 L415,362 L385,363 Z"/>
+        <!-- shop one -->
+        <path d="M108,432 L107,530 M212,431 L213,529"/>
+        <path d="M104,412 L216,411 L215,430 C208,438 197,438 190,430 C183,438 172,438 165,430 C158,438 147,438 140,430 C133,438 122,438 115,430 C111,434 106,433 104,429 Z"/>
+        <path d="M116,446 L168,445 L169,500 L117,501 Z"/>
+        <!-- shop two -->
+        <path d="M258,431 L259,529 M362,432 L361,530"/>
+        <path d="M254,413 L366,412 L366,428 L352,438 L338,428 L324,438 L310,428 L296,438 L282,428 L268,438 L254,428 Z"/>
+        <path d="M266,446 L318,446 L317,501 L267,500 Z"/>
+        <!-- shop three -->
+        <path d="M438,432 L437,529 M542,431 L543,530"/>
+        <path d="M434,413 L546,412 L546,432 L434,433 Z"/>
+        <path d="M446,446 L498,445 L499,500 L447,501 Z"/>
+        <!-- new shop: frame up, the rest still pencilled -->
+        <path d="M587,530 L588,413 M692,412 L693,530"/>
+        <path d="M584,413 L640,412 L640,430 C633,438 622,438 615,430 C608,438 597,438 590,430 C588,433 585,433 584,430"/>
+        <path d="M588,487 L640,486 L641,529"/>
+        <!-- ground -->
+        <path d="M96,531 L704,530"/>
+      </g>
+      <g stroke-width="3.5">
+        <path d="M324,208 C350,201 371,213 400,207 C430,201 451,213 476,206"/>
+        <path d="M338,196 C340,180 348,170 360,164"/>
+        <path d="M374,141 L426,141"/>
+        <path d="M134,413 L134,431 M184,413 L184,431"/>
+        <!-- plan lines for the parts not built yet -->
+        <path stroke-dasharray="7 9" d="M644,413 L696,412 L695,430 C688,438 677,438 670,430 C663,438 652,438 645,431"/>
+        <path stroke-dasharray="7 9" d="M597,447 L640,446 L641,476"/>
+        <!-- ladder leaning on the new frame -->
+        <path d="M652,530 L674,420 M676,531 L697,421 M656,510 L680,510 M660,488 L684,488 M665,466 L688,466 M669,444 L692,444"/>
+        <!-- a little texture in the stock -->
+        <path stroke-width="5" d="M340,226 L340,226 M348,262 L348,262 M462,232 L462,232 M455,286 L455,286 M336,284 L336,284 M400,290 L400,290 M372,226 L372,226 M430,286 L430,286"/>
+      </g>
+      <g fill="#351E28" stroke="none">
+        <!-- counter front -->
+        <path d="M298,318 L502,317 L497,344 C470,348 330,348 303,345 Z"/>
+        <!-- cornices, one per shop, each a little different -->
+        <path d="M100,400 L220,399 L221,413 L99,414 Z"/>
+        <path d="M248,414 L309,386 L372,413 Z"/>
+        <path d="M428,415 C430,394 465,390 490,390 C515,390 550,394 552,415 Z"/>
+        <path d="M580,400 L700,399 L701,413 L579,414 Z"/>
+        <!-- awning stripes -->
+        <path d="M115,412 L140,412 L140,430 C133,438 122,438 115,430 Z M165,412 L190,412 L190,430 C183,438 172,438 165,430 Z"/>
+        <path d="M282,412 L296,412 L296,438 L282,428 Z M310,412 L324,412 L324,438 L310,428 Z M338,412 L352,412 L352,438 L338,428 Z"/>
+        <path d="M448,413 L462,413 L462,432 L448,432 Z M476,413 L490,413 L490,432 L476,432 Z M504,413 L518,413 L518,432 L504,432 Z M532,413 L546,413 L546,432 L532,432 Z"/>
+        <path d="M590,413 L615,413 L615,430 C608,438 597,438 590,430 Z"/>
+        <!-- doors -->
+        <path d="M178,458 C178,452 182,449 190,449 C198,449 202,452 202,458 L203,529 L178,529 Z"/>
+        <path d="M328,458 C328,452 332,449 340,449 C348,449 352,452 352,458 L352,530 L328,529 Z"/>
+        <path d="M508,458 C508,452 512,449 520,449 C528,449 532,452 532,458 L533,529 L508,530 Z"/>
+        <!-- window marks: circle, triangle, diamond -->
+        <path d="M142,459 C150,459 155,465 155,473 C155,481 149,486 142,486 C134,486 129,480 129,472 C129,465 135,459 142,459 Z"/>
+        <path d="M292,458 L306,486 L278,487 Z"/>
+        <path d="M472,457 L487,473 L472,489 L457,473 Z"/>
+        <!-- the same three marks on the one jar -->
+        <path d="M374,243 C379,243 382,246 382,251 C382,256 379,259 374,259 C369,259 366,256 366,251 C366,246 369,243 374,243 Z"/>
+        <path d="M400,242 L409,259 L391,259 Z"/>
+        <path d="M426,241 L435,250 L426,260 L417,250 Z"/>
+      </g>
+    </g>
+  </g>
+</g>
+</svg>

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="A magnifying glass over a handwritten prescription slip frames one line of the handwriting, and a dotted lead carries it to a proposal card with a confidence meter and a tick box, so every proposed change shows its source.">
+  <defs>
+    <filter id="wobble" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3.2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3" result="noise"/>
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0.208  0 0 0 0 0.118  0 0 0 0 0.157  3.5 0 0 0 -2.1" result="specks"/>
+      <feComposite in="specks" in2="SourceGraphic" operator="in" result="ink"/>
+      <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="ink"/></feMerge>
+    </filter>
+  </defs>
+  <clipPath id="lensclip"><path d="M194 300 C194 246 238 202 292 202 C346 202 390 246 390 300 C390 354 346 398 292 398 C238 398 194 354 194 300 Z"/></clipPath>
+  <g filter="url(#grain)">
+    <rect width="800" height="600" fill="#FF5C34"/>
+    <g filter="url(#wobble)">
+      <g transform="translate(4 3)" fill="#D7EFFF" stroke="none">
+        <path transform="rotate(-5 290 305)" d="M142 142 C220 138 360 137 438 140 C442 240 443 380 440 468 C360 472 220 472 140 470 C137 380 138 240 142 142 Z"/>
+        <path transform="rotate(4 596 305)" d="M502 172 C560 169 640 168 690 171 C693 260 693 360 690 438 C640 441 560 442 502 440 C499 360 499 260 502 172 Z"/>
+      </g>
+      <g fill="none" stroke="#351E28" stroke-linecap="round" stroke-linejoin="round">
+        <!-- handwritten prescription slip -->
+        <g transform="rotate(-5 290 305)">
+          <path stroke-width="6" d="M142 142 C220 138 360 137 438 140 C442 240 443 380 440 468 C360 472 220 472 140 470 C137 380 138 240 142 142 Z"/>
+          <circle cx="170" cy="172" r="11" fill="#351E28" stroke="none"/>
+          <path stroke-width="3.5" d="M192 168 L290 167 M192 182 L250 182"/>
+          <path stroke-width="3.5" d="M160 206 L422 204"/>
+          <path stroke-width="3" d="M166 240 c3 -9 8 -9 8 0 c0 5 -4 5 -2 1 c2 -6 7 -7 8 0 c1 5 4 5 6 1 c2 -7 5 -8 7 0 c1 4 3 6 6 1 c2 -5 2 -11 5 -10 c2 1 -1 9 2 10 c3 1 5 -5 8 -5 c3 0 3 4 6 2 m8 0 c2 -7 6 -7 6 0 c0 4 3 5 5 0 c2 -6 6 -6 6 0 c1 5 4 5 6 0 c2 -5 5 -6 7 -1 c1 3 3 4 6 1 m8 0 c3 -9 8 -9 8 0 c0 5 -4 5 -2 1 c2 -6 7 -7 8 0 c1 5 4 5 6 1 c2 -7 5 -8 7 0 c1 4 3 6 6 1 c2 -5 2 -11 5 -10 c2 1 -1 9 2 10 c3 1 5 -5 8 -5 c3 0 3 4 6 2 M166 276 c2 -7 6 -7 6 0 c0 4 3 5 5 0 c2 -6 6 -6 6 0 c1 5 4 5 6 0 c2 -5 5 -6 7 -1 c1 3 3 4 6 1 m8 0 c3 -9 8 -9 8 0 c0 5 -4 5 -2 1 c2 -6 7 -7 8 0 c1 5 4 5 6 1 c2 -7 5 -8 7 0 c1 4 3 6 6 1 c2 -5 2 -11 5 -10 c2 1 -1 9 2 10 c3 1 5 -5 8 -5 c3 0 3 4 6 2 m8 0 c2 -7 6 -7 6 0 c0 4 3 5 5 0 c2 -6 6 -6 6 0 c1 5 4 5 6 0 c2 -5 5 -6 7 -1 c1 3 3 4 6 1 M166 312 c3 -9 8 -9 8 0 c0 5 -4 5 -2 1 c2 -6 7 -7 8 0 c1 5 4 5 6 1 c2 -7 5 -8 7 0 c1 4 3 6 6 1 c2 -5 2 -11 5 -10 c2 1 -1 9 2 10 c3 1 5 -5 8 -5 c3 0 3 4 6 2 m8 0 c3 -9 8 -9 8 0 c0 5 -4 5 -2 1 c2 -6 7 -7 8 0 c1 5 4 5 6 1 c2 -7 5 -8 7 0 c1 4 3 6 6 1 c2 -5 2 -11 5 -10 c2 1 -1 9 2 10 c3 1 5 -5 8 -5 c3 0 3 4 6 2 m8 0 c2 -7 6 -7 6 0 c0 4 3 5 5 0 c2 -6 6 -6 6 0 c1 5 4 5 6 0 c2 -5 5 -6 7 -1 c1 3 3 4 6 1 M166 348 c2 -7 6 -7 6 0 c0 4 3 5 5 0 c2 -6 6 -6 6 0 c1 5 4 5 6 0 c2 -5 5 -6 7 -1 c1 3 3 4 6 1 m8 0 c3 -9 8 -9 8 0 c0 5 -4 5 -2 1 c2 -6 7 -7 8 0 c1 5 4 5 6 1 c2 -7 5 -8 7 0 c1 4 3 6 6 1 c2 -5 2 -11 5 -10 c2 1 -1 9 2 10 c3 1 5 -5 8 -5 c3 0 3 4 6 2 M166 384 c3 -9 8 -9 8 0 c0 5 -4 5 -2 1 c2 -6 7 -7 8 0 c1 5 4 5 6 1 c2 -7 5 -8 7 0 c1 4 3 6 6 1 c2 -5 2 -11 5 -10 c2 1 -1 9 2 10 c3 1 5 -5 8 -5 c3 0 3 4 6 2 m8 0 c2 -7 6 -7 6 0 c0 4 3 5 5 0 c2 -6 6 -6 6 0 c1 5 4 5 6 0 c2 -5 5 -6 7 -1 c1 3 3 4 6 1"/>
+          <path stroke-width="3.5" d="M318 438 c8 -18 16 -20 16 -10 c0 10 -12 10 -8 0 c5 -10 18 -12 20 -3 c1 5 8 3 14 -5 M310 450 L410 448"/>
+        </g>
+        <!-- inside the lens: the same handwriting, magnified, one line framed -->
+        <g clip-path="url(#lensclip)">
+          <path transform="translate(4 3)" fill="#D7EFFF" stroke="none" d="M188 300 C188 243 235 196 292 196 C349 196 396 243 396 300 C396 357 349 404 292 404 C235 404 188 357 188 300 Z"/>
+          <path fill="#D7EFFF" stroke="none" d="M192 300 C192 245 237 200 292 200 C347 200 392 245 392 300 C392 355 347 400 292 400 C237 400 192 355 192 300 Z"/>
+          <g transform="translate(292 300) rotate(-5) scale(2.4) translate(-46 0)">
+            <path stroke-width="2.1" d="M-30 -34 c2 -7 6 -7 6 0 c0 4 3 5 5 0 c2 -6 6 -6 6 0 c1 5 4 5 6 0 c2 -5 5 -6 7 -1 c1 3 3 4 6 1 m8 0 c3 -9 8 -9 8 0 c0 5 -4 5 -2 1 c2 -6 7 -7 8 0 c1 5 4 5 6 1 c2 -7 5 -8 7 0 c1 4 3 6 6 1 c2 -5 2 -11 5 -10 c2 1 -1 9 2 10 c3 1 5 -5 8 -5 c3 0 3 4 6 2 m8 0 c2 -7 6 -7 6 0 c0 4 3 5 5 0 c2 -6 6 -6 6 0 c1 5 4 5 6 0 c2 -5 5 -6 7 -1 c1 3 3 4 6 1 M-6 3 c3 -9 8 -9 8 0 c0 5 -4 5 -2 1 c2 -6 7 -7 8 0 c1 5 4 5 6 1 c2 -7 5 -8 7 0 c1 4 3 6 6 1 c2 -5 2 -11 5 -10 c2 1 -1 9 2 10 c3 1 5 -5 8 -5 c3 0 3 4 6 2 m8 0 c2 -7 6 -7 6 0 c0 4 3 5 5 0 c2 -6 6 -6 6 0 c1 5 4 5 6 0 c2 -5 5 -6 7 -1 c1 3 3 4 6 1 M-40 40 c3 -9 8 -9 8 0 c0 5 -4 5 -2 1 c2 -6 7 -7 8 0 c1 5 4 5 6 1 c2 -7 5 -8 7 0 c1 4 3 6 6 1 c2 -5 2 -11 5 -10 c2 1 -1 9 2 10 c3 1 5 -5 8 -5 c3 0 3 4 6 2 m8 0 c2 -7 6 -7 6 0 c0 4 3 5 5 0 c2 -6 6 -6 6 0 c1 5 4 5 6 0 c2 -5 5 -6 7 -1 c1 3 3 4 6 1 m8 0 c3 -9 8 -9 8 0 c0 5 -4 5 -2 1 c2 -6 7 -7 8 0 c1 5 4 5 6 1 c2 -7 5 -8 7 0 c1 4 3 6 6 1 c2 -5 2 -11 5 -10 c2 1 -1 9 2 10 c3 1 5 -5 8 -5 c3 0 3 4 6 2"/>
+          </g>
+          <g transform="translate(292 300) rotate(-5)">
+            <path stroke-width="6" d="M-84 -18 L-84 -34 L-66 -34 M66 -34 L84 -34 L84 -18 M84 22 L84 38 L66 38 M-66 38 L-84 38 L-84 22"/>
+          </g>
+        </g>
+        <!-- magnifying glass -->
+        <path fill="#351E28" stroke="none" fill-rule="evenodd" d="M178 300 C178 237 229 186 292 186 C355 186 406 237 406 300 C406 363 355 414 292 414 C229 414 178 363 178 300 Z M192 300 C192 245 237 200 292 200 C347 200 392 245 392 300 C392 355 347 400 292 400 C237 400 192 355 192 300 Z"/>
+        <path fill="#351E28" stroke="none" d="M206 374 L222 390 L204 410 L188 394 Z"/>
+        <path fill="#351E28" stroke="none" d="M190 392 C196 386 204 386 208 392 C212 397 210 404 204 410 L136 482 C128 490 116 490 110 484 C104 478 104 466 112 458 Z"/>
+        <path stroke="#D7EFFF" stroke-width="3.5" d="M178 428 L192 442 M162 444 L176 458"/>
+        <!-- dotted lead from the framed line to the card -->
+        <path stroke-width="6" stroke-dasharray="0.5 14" d="M410 268 C440 252 470 236 512 226"/>
+        <!-- proposal card -->
+        <g transform="rotate(4 596 305)">
+          <path stroke-width="6" d="M502 172 C560 169 640 168 690 171 C693 260 693 360 690 438 C640 441 560 442 502 440 C499 360 499 260 502 172 Z"/>
+          <path stroke-width="5" d="M522 204 L522 192 L534 192 M658 192 L670 192 L670 204 M670 236 L670 248 L658 248 M534 248 L522 248 L522 236"/>
+          <path stroke-width="3" d="M536 222 c3 -9 8 -9 8 0 c0 5 -4 5 -2 1 c2 -6 7 -7 8 0 c1 5 4 5 6 1 c2 -7 5 -8 7 0 c1 4 3 6 6 1 c2 -5 2 -11 5 -10 c2 1 -1 9 2 10 c3 1 5 -5 8 -5 c3 0 3 4 6 2 m8 0 c2 -7 6 -7 6 0 c0 4 3 5 5 0 c2 -6 6 -6 6 0 c1 5 4 5 6 0 c2 -5 5 -6 7 -1 c1 3 3 4 6 1"/>
+          <path fill="#351E28" stroke="none" d="M522 272 L604 271 L604 283 L522 284 Z"/>
+          <path stroke-width="3.5" d="M522 304 L668 303 M522 322 L630 322"/>
+          <path fill="#351E28" stroke="none" d="M524 392 L542 392 L542 368 L524 368 Z M550 392 L568 392 L568 352 L550 352 Z"/>
+          <path stroke-width="4" d="M577 392 L595 392 L595 336 L577 336 Z"/>
+          <path stroke-width="3.5" d="M520 408 L598 408"/>
+          <path stroke-width="5" d="M622 352 L666 351 L667 395 L623 396 Z"/>
+          <path stroke-width="8" d="M630 372 L642 386 L662 356"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

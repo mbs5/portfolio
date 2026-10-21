@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img" aria-label="A small machine slides a proposed card toward a family record book, and a family member holding a fountain pen has just ticked it with a check mark before it goes in.">
+  <defs>
+    <filter id="wobble" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="3.2" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="3" result="noise"/>
+      <feColorMatrix in="noise" type="matrix" values="0 0 0 0 0.208  0 0 0 0 0.118  0 0 0 0 0.157  3.5 0 0 0 -2.1" result="specks"/>
+      <feComposite in="specks" in2="SourceGraphic" operator="in" result="ink"/>
+      <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="ink"/></feMerge>
+    </filter>
+  </defs>
+  <g filter="url(#grain)">
+    <rect width="800" height="600" fill="#FF5C34"/>
+    <g filter="url(#wobble)">
+      <g transform="translate(4 3)" fill="#D7EFFF" stroke="none">
+        <!-- card -->
+        <path d="M296 360 C360 357 440 354 520 352 C521 388 522 428 521 464 C440 466 360 469 296 472 Z"/>
+        <!-- machine -->
+        <g transform="translate(40 0)">
+          <path d="M106 292 C106 266 138 250 178 249 C218 249 250 265 252 292 C256 340 257 440 252 492 C210 497 140 497 104 493 C100 440 101 340 106 292 Z"/>
+        </g>
+        <!-- book -->
+        <g transform="translate(-40 0)">
+          <path d="M574 236 C620 232 670 232 701 237 C705 320 706 420 702 484 C660 488 612 488 574 486 Z"/>
+          <path d="M701 262 C710 262 714 264 714 270 L714 290 C714 296 710 297 701 297 Z M702 318 C711 318 715 320 715 326 L715 344 C715 350 711 351 702 351 Z"/>
+          <path d="M574 486 C612 488 660 488 702 484 L700 502 C660 506 612 506 574 504 Z"/>
+        </g>
+        <!-- pen barrel (upper, above the hand) -->
+        <path d="M392 289 L375 206 L379 186 L391 202 L408 286 Z"/>
+        <!-- pen nib -->
+        <path d="M423 401 C430 392 432 378 426 366 L407 370 C405 382 412 393 423 401 Z"/>
+        <!-- hand -->
+        <path d="M373 292 C381 288 388 287 392 289 C398 286 408 285 414 289 C424 296 429 312 429 330 C429 342 425 350 417 350 C412 350 408 349 404 349 C401 357 396 366 388 370 C376 375 360 373 350 365 C338 356 331 340 331 308 Z"/>
+        <!-- cuff -->
+        <path d="M373 292 L365 272 L324 287 L331 308 Z"/>
+      </g>
+      <g fill="none" stroke="#351E28" stroke-linecap="round" stroke-linejoin="round">
+        <!-- card: out of the machine slot, into the book rings -->
+        <path stroke-width="6" d="M300 360 C360 357 440 354 516 352 M516 464 C440 466 360 469 300 472"/>
+        <path stroke-width="3.5" d="M318 378 C350 377 380 376 398 376 M440 374 C460 373 480 372 500 372"/>
+        <path stroke-width="3.5" d="M320 404 L356 403 M321 424 L352 424 M320 444 L358 444"/>
+        <path stroke-width="3.5" d="M446 400 L496 399 M449 420 L492 419 M446 440 L498 439"/>
+        <path stroke-width="9" d="M372 419 L393 441 L423 401"/>
+        <!-- machine -->
+        <g transform="translate(40 0)">
+          <path stroke-width="6" d="M106 292 C106 266 138 250 178 249 C218 249 250 265 252 292 C256 340 257 440 252 492 C210 497 140 497 104 493 C100 440 101 340 106 292 Z"/>
+          <path stroke-width="3.5" d="M106 312 C150 309 210 309 253 312"/>
+          <path stroke-width="6" d="M178 249 C180 236 183 224 188 212"/>
+          <circle cx="190" cy="206" r="9" fill="#351E28" stroke="none"/>
+          <path stroke-width="5" d="M165 330 C183 330 196 343 196 360 C196 377 183 390 165 390 C148 390 135 377 135 360 C135 343 148 330 165 330 Z"/>
+          <path stroke-width="3.5" d="M165 360 L181 346"/>
+          <circle cx="165" cy="360" r="5" fill="#351E28" stroke="none"/>
+          <path stroke-width="3.5" d="M126 414 L222 413 M126 431 L222 431 M127 448 L220 449"/>
+          <circle cx="134" cy="472" r="7" fill="#351E28" stroke="none"/>
+          <circle cx="158" cy="472" r="7" fill="#351E28" stroke="none"/>
+          <path stroke-width="3" d="M226 486 L242 470 M212 488 L242 458 M230 488 L244 474"/>
+          <path stroke-width="3.5" d="M112 330 L120 322 M112 352 L124 340 M112 374 L124 362 M112 396 L122 386"/>
+          <path fill="#351E28" stroke="none" d="M244 352 C249 351 255 351 260 352 L261 480 C255 482 249 482 244 480 Z"/>
+          <path fill="#351E28" stroke="none" d="M118 494 L146 496 L144 508 C136 510 126 510 120 507 Z M212 496 L240 494 L238 507 C232 510 222 510 214 508 Z"/>
+        </g>
+        <!-- book -->
+        <g transform="translate(-40 0)">
+          <path fill="#351E28" stroke="none" d="M552 238 C560 235 568 235 576 236 L576 504 C568 505 560 505 551 503 C549 420 549 320 552 238 Z"/>
+          <path stroke-width="6" d="M574 236 C620 232 670 232 701 237 C705 320 706 420 702 484 L700 502 C660 506 612 506 574 504"/>
+          <path stroke-width="3.5" d="M576 486 C612 488 660 488 702 484 M578 494 C620 496 660 496 701 492"/>
+          <path stroke-width="6" d="M596 271 C576 263 538 265 538 280 C538 295 576 297 596 289"/>
+          <path stroke-width="6" d="M596 371 C576 363 538 365 538 380 C538 395 576 397 596 389"/>
+          <path stroke-width="6" d="M596 441 C576 433 538 435 538 450 C538 465 576 467 596 459"/>
+          <path stroke-width="3.5" d="M612 268 C635 266 660 266 682 268 C683 282 683 297 682 312 C660 314 635 314 612 312 C611 297 611 282 612 268 Z"/>
+          <path stroke-width="3.5" d="M624 284 L670 283 M624 298 L658 298"/>
+          <path stroke-width="5" d="M646 446 C642 420 644 392 652 360"/>
+          <path fill="#351E28" stroke="none" d="M645 420 C630 418 620 408 618 396 C632 397 643 406 645 420 Z"/>
+          <path fill="#351E28" stroke="none" d="M647 404 C660 400 670 388 670 376 C657 379 648 390 647 404 Z"/>
+          <path fill="#351E28" stroke="none" d="M648 386 C636 382 629 371 629 360 C640 363 647 373 648 386 Z"/>
+          <path fill="#351E28" stroke="none" d="M651 366 C653 354 660 346 668 342 C668 353 662 362 651 366 Z"/>
+          <path fill="#351E28" stroke="none" d="M644 436 C656 434 666 426 670 416 C658 416 648 424 644 436 Z"/>
+          <path stroke-width="3.5" d="M703 262 C710 262 714 264 714 270 L714 290 C714 296 710 297 703 297 M704 318 C711 318 715 320 715 326 L715 344 C715 350 711 351 704 351"/>
+          <path fill="#351E28" stroke="none" d="M648 502 L664 502 L666 534 L657 525 L647 533 Z"/>
+        </g>
+        <!-- sleeve, bleeding off the top edge -->
+        <path fill="#351E28" stroke="none" d="M366 274 C330 180 305 90 292 -20 L168 -20 C220 90 280 200 323 289 Z"/>
+        <!-- cuff -->
+        <path stroke-width="6" d="M373 292 L365 272 M324 287 L331 308"/>
+        <path stroke-width="6" d="M365 272 C352 276 336 282 324 287"/>
+        <circle cx="342" cy="291" r="4" fill="#351E28" stroke="none"/>
+        <!-- pen tail -->
+        <path stroke-width="5" d="M392 289 L375 206 L379 186 L391 202 L408 286"/>
+        <path fill="#351E28" stroke="none" d="M392 289 L385 255 L401 251 L408 286 Z"/>
+        <path fill="#351E28" stroke="none" d="M384 247 L375 206 L379 186 L391 202 L399 244 Z"/>
+        <path stroke-width="4" d="M405 240 L398 207"/>
+        <!-- pen section and nib -->
+        <path fill="#351E28" stroke="none" d="M427 367 L422 347 L404 351 L408 371 Z"/>
+        <path stroke-width="3.5" d="M423 401 C430 392 432 378 426 366 L407 370 C405 382 412 393 423 401 Z"/>
+        <path stroke-width="3" d="M422 396 L418 380"/>
+        <circle cx="417" cy="377" r="3" fill="#351E28" stroke="none"/>
+        <!-- hand -->
+        <path stroke-width="6" d="M373 292 C381 288 388 287 392 289 C398 286 408 285 414 289 C424 296 429 312 429 330 C429 342 425 350 417 350 C412 350 408 349 404 349 C401 357 396 366 388 370 C376 375 360 373 350 365 C338 356 331 340 331 308"/>
+        <path stroke-width="3.5" d="M404 297 C410 311 413 327 412 343"/>
+        <path stroke-width="3" d="M416 340 C420 338 424 340 425 344"/>
+        <path stroke-width="3.5" d="M404 349 C398 337 390 326 378 319"/>
+        <path stroke-width="3.5" d="M389 369 C387 361 381 356 373 355 M364 372 C362 364 357 359 350 357"/>
+        <path stroke-width="3.5" d="M347 324 C354 319 362 319 369 323"/>
+      </g>
+    </g>
+  </g>
+</svg>
