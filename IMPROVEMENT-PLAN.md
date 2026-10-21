@@ -35,6 +35,7 @@ Source of truth for claims: notes/facts.md. Research: notes/research-0*.md. Skil
 18. Hosted showcase with a brand switcher over one real app.
 
 ## Pass log
+- 2026-10-21, pass 14. Product Engineer title, colour rugby-shirt cutout, breadth stickers (no tech names). See site/snapshots/pass-14/NOTES.md.
 - 2026-10-21, pass 13. Hero to the reference: MB signature mark, black and white cutout, reference-style stickers with marks and second lines, UB seal badge, stage flush with the band. See site/snapshots/pass-13/NOTES.md.
 - 2026-10-21, pass 12. Sticker-stage hero (black cherry band, SOFTWARE ENGINEER, cutout portrait, six stickers), numbers off the cards, posters for the More projects, StoreKit as "shadcn for ecommerce" on its own subdomain. See site/snapshots/pass-12/NOTES.md.
 - 2026-10-21, pass 11. Five main projects linked to their own product sites (Healthpedia, EggFlow, Worn each on a closedloopintel.com subdomain with its own design), two-up grid on phones, Worn poster, eyebrows removed. Shipped on MBS's "push". See site/snapshots/pass-11/NOTES.md.
