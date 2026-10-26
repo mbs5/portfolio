@@ -1,0 +1,56 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>OG card</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+@font-face{font-family:'League Gothic';src:url(../assets/fonts/LeagueGothic-Regular.woff2) format('woff2')}
+@font-face{font-family:'Instrument Sans';font-weight:400 700;src:url(../assets/fonts/InstrumentSans-var.woff2) format('woff2')}
+@font-face{font-family:'Kalam';src:url(../assets/fonts/Kalam-Regular.woff2) format('woff2')}
+html,body{margin:0;background:#000}
+.card{position:relative;width:1200px;height:630px;overflow:hidden;background:var(--cherry);color:var(--paper);font-family:var(--sans)}
+.mast{position:absolute;left:64px;top:44px;display:flex;align-items:center;gap:14px;font-size:22px;font-weight:600}
+.mast svg{width:76px;height:48px}
+.ttl{position:absolute;left:58px;font:400 200px/.86 var(--display);text-transform:uppercase;letter-spacing:.005em;white-space:nowrap}
+.line{position:absolute;left:64px;font-size:26px;line-height:1.35;color:color-mix(in srgb,var(--paper) 78%,var(--cherry));max-width:620px}
+.line b{color:var(--paper);font-weight:600}
+.hand{font:400 30px/1 var(--hand);color:var(--tangerine)}
+/* stickers: same language as the site, bigger so they read in a thumbnail */
+.stk{position:absolute;font-size:36px;padding:18px 26px;box-shadow:0 12px 24px rgba(53,30,40,.22);transition:none}
+.stk small{font-size:13px}
+.stk-circle{padding:30px 32px}
+/* A: pinboard band */
+.A .ttl{top:104px;font-size:176px}
+.A .line{top:286px;max-width:760px;font-size:24px}
+.A .stage{position:absolute;left:0;right:0;bottom:0;height:200px;border-radius:0 190px 0 0;background:var(--paper);background-image:var(--grain),linear-gradient(var(--rule) 1px,transparent 1px),linear-gradient(90deg,var(--rule) 1px,transparent 1px);background-size:220px 220px,72px 72px,72px 72px;overflow:hidden}
+/* B: portrait plate */
+.B .ttl{top:108px;font-size:150px;line-height:.84;white-space:normal;width:640px}
+.B .line{top:364px;max-width:620px;font-size:25px}
+.B .plate{position:absolute;right:58px;top:50px;width:410px;height:530px;background:var(--tangerine);border-radius:14px;box-shadow:0 18px 40px rgba(0,0,0,.35);transform:rotate(2.5deg)}
+.B .plate img{position:absolute;inset:16px;width:368px;height:490px;object-fit:cover;object-position:50% 20%;border-radius:8px;filter:saturate(.95)}
+.B .plate::after{content:"";position:absolute;inset:0;border-radius:14px;background-image:var(--grain);background-size:220px 220px;opacity:.9;pointer-events:none;mix-blend-mode:multiply}
+</style></head><body>
+<div class="card" id="card">
+<div class="mast"><svg viewBox="0 0 64 40" aria-hidden="true"><path d="M3 20c0-9 6-16 18-17h22c10 0 18 8 18 17s-8 17-18 17H21C9 36 3 29 3 20z" fill="#FF5C34"/><path d="M14 29V12l8 10 8-10v17" fill="none" stroke="#351E28" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M38 12v17h6c4 0 6-2 6-4.5S48 20 44 20h-6h6c3.5 0 5.5-2 5.5-4s-2-4-5.5-4h-6" fill="none" stroke="#351E28" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Muhammad Bin Sohail</span><span style="opacity:.6;font-weight:500">portfolio.closedloopintel.com</span></div>
+<div class="ttl">Product Engineer</div>
+<div class="line" id="line"></div>
+<div id="extra"></div>
+</div>
+<script>
+const v=new URLSearchParams(location.search).get('v')||'A';
+const card=document.getElementById('card'); card.classList.add(v);
+document.getElementById('line').innerHTML = v==='A'
+ ? '<b>CS senior at the University at Buffalo, new grad 2027.</b> Founding engineer, 2025 to 2026. I ship the software <span class="hand">real businesses run on.</span>'
+ : '<b>University at Buffalo, new grad 2027.</b> Founding engineer, 2025 to 2026. I ship the software <span class="hand">real businesses run on.</span>';
+const stk = (cls,style,inner)=>`<a class="stk ${cls}" style="${style}">${inner}</a>`;
+document.getElementById('extra').innerHTML = v==='A' ? `
+<div class="stage">
+ ${stk('stk-circle','left:48px;top:22px;transform:rotate(-7deg);background:var(--blue);color:var(--cherry)','<b>Multi-tenant<br>commerce</b><small>one catalog, many brands</small>')}
+ ${stk('stk-rect','left:318px;top:58px;transform:rotate(-4deg);background:var(--tangerine);color:var(--cherry)','<b>Operations<br>software</b><small>ERPs that close the day</small>')}
+ ${stk('stk-tag','left:596px;top:18px;transform:rotate(3deg);background:#F2C94C;color:var(--cherry)','<b>Agent <span class="chip">tooling</span></b><small>MCP servers a human approves</small>')}
+ ${stk('stk-rect','left:862px;top:76px;transform:rotate(-5deg);background:var(--blue);color:var(--cherry)','<b>Founding<br>engineer</b><small>zero to live, 2025 to 2026</small>')}
+ ${stk('stk-tag','left:640px;top:142px;transform:rotate(-2deg);background:#E8617C;color:var(--paper)','<b>Design <span class="chip" style="background:var(--paper);color:#E8617C">systems</span></b><small>eight storefronts, one contract</small>')}
+</div>` : `
+<div class="plate"><img src="../assets/about-mbs@2x.webp" alt=""></div>
+${stk('stk-rect','left:64px;top:514px;transform:rotate(-3deg);background:var(--tangerine);color:var(--cherry);font-size:30px','<b>Operations software</b><small>ERPs that close the day</small>')}
+${stk('stk-tag','left:372px;top:500px;transform:rotate(3deg);background:#F2C94C;color:var(--cherry);font-size:26px','<b>Agent <span class="chip">tooling</span></b><small>MCP servers a human approves</small>')}
+${stk('stk-circle','left:640px;top:396px;transform:rotate(-7deg);background:var(--blue);color:var(--cherry);font-size:24px;z-index:3','<b>Multi-tenant<br>commerce</b>')}
+`;
+</script></body></html>
