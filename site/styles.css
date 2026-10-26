@@ -119,6 +119,22 @@ body::before{content:"";position:fixed;inset:0;background:var(--grain);opacity:.
 /* more */
 .more{padding:clamp(72px,10vh,112px) 0 clamp(72px,10vh,112px)}
 
+/* about: a tangerine poster band. The portrait sits as a printed plate: a cool blue plane a few pixels off register behind it (as the SVG posters do), the photo itself untouched apart from the shared print grain, and a black cherry name plate in the display face underneath. */
+.about{background:var(--tangerine);color:var(--cherry);padding:clamp(72px,11vh,120px) 0}
+.about-in{display:grid;grid-template-columns:380px minmax(0,1fr);gap:clamp(40px,6vw,88px);align-items:center}
+.plate{position:relative;margin:0;width:100%;max-width:380px}
+.plate-fill{position:absolute;inset:0;transform:translate(14px,12px);background:var(--blue);z-index:0}
+.plate-pic{position:relative;display:block;z-index:1;isolation:isolate;outline:3px solid var(--cherry);outline-offset:0;background:var(--cherry)}
+.plate-pic img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+.plate-pic::after{content:"";position:absolute;inset:0;background:var(--grain);background-size:220px 220px;opacity:.42;mix-blend-mode:multiply;pointer-events:none}
+.plate-cap{position:relative;z-index:2;margin:-2px 0 0 0;padding:12px 16px 14px;background:var(--cherry);color:var(--paper);outline:3px solid var(--cherry);display:flex;flex-direction:column;gap:3px}
+.plate-cap b{font:400 clamp(26px,2.6vw,34px)/.95 var(--display);text-transform:uppercase;letter-spacing:.02em;white-space:nowrap}
+.plate-cap small{font:600 11px/1.3 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--blue)}
+.about-t{border-bottom-color:var(--cherry)}
+.about-txt p{margin-top:22px;font-size:18px;line-height:1.55;max-width:48ch}
+.about-txt .about-links{display:flex;gap:28px;margin-top:26px;font-size:15.5px;font-weight:600}
+.about .plink:hover{color:var(--paper)}
+
 /* contact: the closing poster */
 .contact{background:var(--cherry);color:var(--blue);padding:clamp(80px,12vh,128px) 0 64px}
 .contact.poster::after{opacity:.35;filter:invert(1)}
@@ -176,6 +192,15 @@ body::before{content:"";position:fixed;inset:0;background:var(--grain);opacity:.
   .stk-4{right:2%;top:4%;max-width:50vw}
   .stk-5{right:2%;top:30%;max-width:44vw}
   .stk-6{right:4%;top:70%}
+}
+@media (max-width:760px){
+  .about{padding:56px 0 64px}
+  .about-in{grid-template-columns:1fr;gap:36px}
+  .plate{max-width:78vw;margin:0 auto}
+  .plate-fill{transform:translate(10px,9px)}
+  .plate-cap{padding:10px 12px 12px}
+  .plate-cap b{font-size:24px;white-space:normal}
+  .about-txt p{font-size:16px}
 }
 @media (max-width:380px){.mast ul{gap:12px;font-size:14px}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
