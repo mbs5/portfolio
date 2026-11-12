@@ -69,7 +69,7 @@
     wrap.appendChild(ov);
     overlays[i] = ov;
     const go = (e, sheet) => { e.preventDefault(); e.stopPropagation(); open(i, sheet); };
-    for (const [sel, sheet] of [['.vid-play', false], ['.vid-likes', false], ['.vid-coms', true]]) {
+    for (const [sel, sheet] of [['.vid-play', false], ['.vid-hook', false], ['.vid-likes', false], ['.vid-coms', true]]) {
       const el = ov.querySelector(sel);
       el.addEventListener('click', (e) => go(e, sheet));
       el.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') go(e, sheet); });

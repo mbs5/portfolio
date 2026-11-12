@@ -11,9 +11,9 @@
 .vid-play:hover{transform:scale(1.07)}
 .card:hover .vid-play{opacity:.95}
 .vid-play:hover svg{fill:var(--tangerine)}
-.vid-hook{position:absolute;left:50%;top:calc(50% + 46px);display:inline-flex;align-items:baseline;gap:8px;padding:7px 14px 8px;border-radius:999px;background:var(--cherry);color:var(--blue);font:400 19px/1.1 var(--hand);white-space:nowrap;box-shadow:3px 3px 0 var(--tangerine);opacity:0;transform:translate(-50%,-6px);transition:opacity .25s,transform .25s cubic-bezier(.2,.7,.2,1)}
-.card:hover .vid-hook,.vid-play:focus-visible + .vid-hook{opacity:1;transform:translate(-50%,0)}
-@media (hover:none){.vid-hook{opacity:1;transform:translate(-50%,0);font-size:17px}}
+.vid-hook{pointer-events:auto;cursor:pointer;position:absolute;left:50%;top:calc(50% + 46px);display:inline-flex;align-items:baseline;gap:8px;padding:7px 14px 8px;border-radius:999px;background:var(--cherry);color:var(--blue);font:400 19px/1.1 var(--hand);white-space:nowrap;box-shadow:3px 3px 0 var(--tangerine);transform:translate(-50%,0);transition:transform .25s cubic-bezier(.2,.7,.2,1)}
+.card:hover .vid-hook,.vid-play:focus-visible + .vid-hook{transform:translate(-50%,-2px)}
+@media (hover:none){.vid-hook{font-size:17px}}
 @media (max-width:560px){.vid-hook{top:calc(50% + 40px);font-size:16px;padding:6px 12px 7px}}
 .vid-stats{position:absolute;left:12px;bottom:12px;display:flex;gap:6px;align-items:center}
 .vid-s,.vid-len{display:inline-flex;align-items:center;gap:5px;height:30px;padding:0 11px;border-radius:999px;background:var(--cherry);color:var(--blue);font:600 13.5px/1 var(--sans)}
