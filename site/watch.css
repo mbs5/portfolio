@@ -6,10 +6,15 @@
 .vid-preview.on{opacity:1}
 .vid-ov{position:absolute;inset:0;pointer-events:none}
 .vid-play,.vid-s{pointer-events:auto;cursor:pointer}
-.vid-play{position:absolute;left:50%;top:50%;width:68px;height:68px;margin:-34px 0 0 -34px;display:grid;place-items:center;border-radius:50%;background:var(--tangerine);box-shadow:0 0 0 2px var(--cherry),4px 4px 0 var(--cherry);transition:transform .2s cubic-bezier(.2,.7,.2,1),opacity .3s}
-.vid-play svg{width:30px;height:30px;fill:var(--cherry);transform:translateX(2px)}
+.vid-play{position:absolute;left:50%;top:50%;width:68px;height:68px;margin:-34px 0 0 -34px;display:grid;place-items:center;border-radius:50%;background:var(--cherry);box-shadow:0 0 0 3px var(--blue),5px 5px 0 3px var(--cherry);transition:transform .2s cubic-bezier(.2,.7,.2,1),opacity .3s}
+.vid-play svg{width:30px;height:30px;fill:var(--blue);transform:translateX(2px)}
 .vid-play:hover{transform:scale(1.07)}
-.card:hover .vid-play{opacity:.92}
+.card:hover .vid-play{opacity:.95}
+.vid-play:hover svg{fill:var(--tangerine)}
+.vid-hook{position:absolute;left:50%;top:calc(50% + 46px);display:inline-flex;align-items:baseline;gap:8px;padding:7px 14px 8px;border-radius:999px;background:var(--cherry);color:var(--blue);font:400 19px/1.1 var(--hand);white-space:nowrap;box-shadow:3px 3px 0 var(--tangerine);opacity:0;transform:translate(-50%,-6px);transition:opacity .25s,transform .25s cubic-bezier(.2,.7,.2,1)}
+.card:hover .vid-hook,.vid-play:focus-visible + .vid-hook{opacity:1;transform:translate(-50%,0)}
+@media (hover:none){.vid-hook{opacity:1;transform:translate(-50%,0);font-size:17px}}
+@media (max-width:560px){.vid-hook{top:calc(50% + 40px);font-size:16px;padding:6px 12px 7px}}
 .vid-stats{position:absolute;left:12px;bottom:12px;display:flex;gap:6px;align-items:center}
 .vid-s,.vid-len{display:inline-flex;align-items:center;gap:5px;height:30px;padding:0 11px;border-radius:999px;background:var(--cherry);color:var(--blue);font:600 13.5px/1 var(--sans)}
 .vid-s svg{width:15px;height:15px;fill:none;stroke:var(--blue);stroke-width:2.2;stroke-linejoin:round}

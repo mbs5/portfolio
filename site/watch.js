@@ -8,10 +8,10 @@
   const SRC = (id) => `${SB}/storage/v1/object/public/pf-videos/${id}.mp4`;
 
   const VIDEOS = [
-    { id: 'eggflow', title: 'EggFlow', len: '1:58', line: 'The ERP I built for my family’s three layer farms.',
+    { id: 'eggflow', title: 'EggFlow', len: '1:58', hook: 'Follow one farm day, start to finish', line: 'The ERP I built for my family’s three layer farms.',
       details: ['Each house entered on a phone, in petti and trays', 'Five checks before the farm day closes', 'A photo of a cash memo fills in the sale', 'Dues tracked by age, every farm on one screen'],
       meta: 'Solo, 2026.', link: 'https://eggflow.closedloopintel.com', linkText: 'The story' },
-    { id: 'peptiful', title: 'Peptiful', len: '2:57', line: 'What a peptide is, then a brand launched on one engine.',
+    { id: 'peptiful', title: 'Peptiful', len: '2:57', hook: 'From one peptide to a whole brand', line: 'What a peptide is, then a brand launched on one engine.',
       details: ['Peptides from first principles, GLP-1 as the example', 'Catalog, label, store and checkout', 'The lab ships under your brand', 'A payout split on every order'],
       meta: 'Built By Design, 2025 to 2026. UI and integration layer.', link: 'https://www.peptiful.com', linkText: 'peptiful.com' },
   ];
@@ -59,7 +59,8 @@
     const ov = document.createElement('span');
     ov.className = 'vid-ov';
     ov.innerHTML = `
-      <span class="vid-play" role="button" tabindex="0" aria-label="Play the ${esc(v.title)} film, ${v.len}">${icon.play}</span>
+      <span class="vid-play" role="button" tabindex="0" aria-label="${esc(v.hook)}. Play the ${esc(v.title)} film, ${v.len}">${icon.play}</span>
+      <span class="vid-hook" aria-hidden="true">${esc(v.hook)}</span>
       <span class="vid-stats">
         <span class="vid-s vid-likes" role="button" tabindex="0" aria-label="Likes">${icon.heart}<b>0</b></span>
         <span class="vid-s vid-coms" role="button" tabindex="0" aria-label="Comments">${icon.chat}<b>0</b></span>
